@@ -23,6 +23,11 @@ group :development, :test do
   gem 'spring'
 end
 
+group :development do
+  gem 'rack-livereload'
+  gem 'guard-livereload', require: false
+end
+
 group :production do
   gem 'rails_12factor'
 end
