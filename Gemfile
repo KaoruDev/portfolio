@@ -11,6 +11,9 @@ gem 'unicorn'
 gem 'devise'
 gem 'awesome_print'
 
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'autoprefixer-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
