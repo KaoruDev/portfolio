@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'unicorn'
 
 gem 'devise'
+gem 'awesome_print'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
