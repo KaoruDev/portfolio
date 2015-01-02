@@ -1,0 +1,17 @@
+@import url('//fonts.googleapis.com/css?family=Lato:100,400,700|Josefin+Slab:600|Amatic+SC');
+
+
+$body-text: 'Lato', sans-serif;
+$body-text-highlight: 'Josefin Slab', serif;
+$title-text: 'Amatic SC', sans-serif;
+
+
+h1 {
+  font-family: $title-text;
+  font-size: 10em;
+  margin-top: 0px;
+}
+
+body {
+  font-family: $body-text;
+}
