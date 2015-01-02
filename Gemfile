@@ -21,6 +21,12 @@ group :development, :test do
   gem 'pry'
   gem 'pry-rails'
   gem 'spring'
+  gem 'rspec-rails', '~> 3.0'
+end
+
+group :test do
+  gem 'fabricator'
+  gem 'faker'
 end
 
 group :development do
