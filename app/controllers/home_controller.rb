@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
+  before_action :authenticate_user!, :except => [:index]
+
   def index
-    redirect_to dashboard_path
   end
 
   def dashboard
