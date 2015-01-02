@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150102200400) do
   end
 
   create_table "tags", force: :cascade do |t|
+    t.string   "name"
     t.integer  "taggable_id"
     t.string   "taggable_type"
     t.datetime "created_at",    null: false

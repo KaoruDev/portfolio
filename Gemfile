@@ -25,7 +25,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'fabricator'
+  gem 'fabrication'
   gem 'faker'
 end
 
