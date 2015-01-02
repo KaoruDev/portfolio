@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Portfolio</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title><%= @title || 'Portfolio' %></title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
+  <meta charset="UTF-8">
 </head>
 <body>
 
-<%= yield %>
+  <div class="center-container-column">
+    <header>
+      <h1 class="page-title"><%= @title || 'Ramblings' %></h1>
+      <%= render "shared/navigation" %>
+    </header>
+    <%= yield %>
+  </div>
 
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= yield :javascript %>
 </body>
 </html>
