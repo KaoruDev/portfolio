@@ -11,6 +11,9 @@ gem 'unicorn'
 gem 'devise'
 gem 'awesome_print'
 
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'autoprefixer-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -20,7 +23,11 @@ group :development, :test do
   gem 'spring'
 end
 
+group :development do
+  gem 'rack-livereload'
+  gem 'guard-livereload', require: false
+end
+
 group :production do
   gem 'rails_12factor'
 end
-
