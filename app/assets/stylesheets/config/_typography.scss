@@ -40,6 +40,11 @@ a {
   color: $link-color-base;
 }
 
-a:hover {
+a:hover, a.title-link:hover {
   color: #9AA5AB;
+}
+
+a.title-link {
+  font-family: $title-text;
+  color: inherit;
 }

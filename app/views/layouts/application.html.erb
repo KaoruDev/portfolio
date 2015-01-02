@@ -10,7 +10,7 @@
 
   <div class="center-container-column">
     <header>
-      <h1 class="page-title"><%= @title || 'Ramblings' %></h1>
+      <h1 class="page-title"><a href="/" class="title-link"><%= @title || 'Ramblings' %></a></h1>
       <%= render "shared/navigation" %>
     </header>
     <%= yield %>
