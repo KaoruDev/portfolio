@@ -6,7 +6,7 @@
 
 
   <div id="wmd-button-bar"></div>
-  <textarea name="post[body]" id="wmd-input" cols="96" rows="20" class="form-control"></textarea>
+  <textarea name="post[body]" id="wmd-input" cols="96" rows="20" class="form-control"><%= @post.body %></textarea>
   <div id="wmd-preview" class="clearfix"></div>
   <%= f.submit "Submit", :class => "btn btn-primary" %>
 <% end %>

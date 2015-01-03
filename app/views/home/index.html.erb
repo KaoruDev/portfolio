@@ -1,9 +1,14 @@
 <div class="row">
   <div class="col-xs-12">
     <% @posts.each do |post| %>
-      <div class="post-container clearfix">
-      <h2 class="post-title"><%= post.title %></h2>
-      <p class="post-body"><%= post.body %></p>
+      <div class="post-container">
+        <div class="post-title-container">
+          <div class="post-title-inner-container">
+            <span class="post-title"><%= post.title %></span><br>
+            <span class="post-timestamp"><%= post.updated_at.strftime("%b %d, %Y") %></span>
+          </div>
+        </div>
+        <p class="post-body clearfix"><%= post.body %></p>
       </div>
     <% end %>
   </div>
