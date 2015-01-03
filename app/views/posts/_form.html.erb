@@ -18,7 +18,7 @@
 
       Markdown.Extra.init(converter);
 
-      converter.hooks.chain('postSpanGamut', utils.Markdown.imageClassHook);
+      utils.setupMarkdownHooks(converter);
 
       var editor = new Markdown.Editor(converter);
       editor.run();

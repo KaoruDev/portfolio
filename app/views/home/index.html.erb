@@ -27,13 +27,13 @@
 
       Markdown.Extra.init(converter);
 
-      converter.hooks.chain('postSpanGamut', utils.Markdown.imageClassHook);
+      utils.setupMarkdownHooks(converter);
 
       $('.post-body').each(function (idx, el) {
         var $el = $(el);
         $el.html(converter.makeHtml($el.text()));
+      });
 
-      })
     } ();
   </script>
 <% end %>
