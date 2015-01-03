@@ -1,9 +1,28 @@
 <%= form_for @post do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_area :body, :class => "tinymce", :rows => 20, :cols => 120 %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, :class => "form-control" %>
+  </div>
+
+
+  <div id="wmd-button-bar"></div>
+  <textarea name="post[body]" id="wmd-input" cols="96" rows="20" class="form-control"></textarea>
+  <div id="wmd-preview" class="clearfix"></div>
   <%= f.submit "Submit", :class => "btn btn-primary" %>
 <% end %>
 
 <%= content_for :javascript do %>
+  <script>
+    !function () {
+      var converter = new Markdown.Converter();
 
+      Markdown.Extra.init(converter);
+
+      converter.hooks.chain('postSpanGamut', utils.Markdown.imageClassHook);
+
+      var editor = new Markdown.Editor(converter);
+      editor.run();
+
+    }();
+  </script>
 <% end %>

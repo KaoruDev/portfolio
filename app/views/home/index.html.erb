@@ -3,9 +3,27 @@
     <% @posts.each do |post| %>
       <div class="post-container clearfix">
       <h2 class="post-title"><%= post.title %></h2>
-      <p><%= post.body.html_safe %></p>
+      <p class="post-body"><%= post.body %></p>
       </div>
     <% end %>
   </div>
 </div>
+
+<%= content_for :javascript do %>
+  <script>
+    !function () {
+      var converter = new Markdown.Converter();
+
+      Markdown.Extra.init(converter);
+
+      converter.hooks.chain('postSpanGamut', utils.Markdown.imageClassHook);
+
+      $('.post-body').each(function (idx, el) {
+        var $el = $(el);
+        $el.html(converter.makeHtml($el.text()));
+
+      })
+    } ();
+  </script>
+<% end %>
 

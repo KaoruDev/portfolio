@@ -109,6 +109,8 @@ GEM
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
+    pagedown-bootstrap-rails (2.1.0)
+      railties (> 3.1)
     pg (0.17.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -221,6 +223,7 @@ DEPENDENCIES
   font-awesome-sass (~> 4.2.0)
   guard-livereload
   jquery-rails
+  pagedown-bootstrap-rails
   pg
   pry
   pry-rails
