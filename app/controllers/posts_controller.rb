@@ -14,13 +14,15 @@ class PostsController < ApplicationController
   end
 
   def create
-    current_user.posts.create(post_params)
+    @post = current_user.posts.create(post_params)
+    update_tags
     redirect_to root_path
   end
 
   def update
     @post = Post.find(params[:id])
     @post.update(post_params)
+    update_tags
     redirect_to root_path
   end
 
@@ -29,6 +31,18 @@ class PostsController < ApplicationController
   end
 
   private
+
+  def update_tags
+    new_tags = params[:tags].split(",")
+    old_tags = @post.tags.pluck(:name)
+    diff = old_tags - new_tags
+
+    @post.tags.where(name: diff).destroy_all
+
+    new_tags.each do |tag|
+      @post.tags.find_or_create_by(name: tag)
+    end
+  end
 
   def post_params
     params.require(:post).permit!

@@ -9,6 +9,11 @@
           </div>
         </div>
         <p class="post-body clearfix"><%= post.body %></p>
+        <p class="tags-container">
+          <% post.tags.each do |tag| %>
+            <%= link_to tag.name, "#", :class => "btn btn-info" %>
+          <% end %>
+        </p>
         <% if current_user %>
           <div class="post-action-container">
             <%= link_to "edit", edit_post_path(post) %> |
