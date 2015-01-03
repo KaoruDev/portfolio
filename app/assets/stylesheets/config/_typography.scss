@@ -16,9 +16,9 @@ h2, h3, h4, h5, h6 {
 
 h1 {
   font-family: $title-text;
-  font-size: 5em;
+  font-size: 3em;
   @media (min-width: 370px) {
-    font-size: 7em;
+    font-size: 5em;
   }
 }
 

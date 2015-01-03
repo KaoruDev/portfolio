@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= @title || 'Portfolio' %></title>
+  <title><%= @title || 'Kaoru K' %></title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
   <meta charset="UTF-8">
@@ -11,6 +11,7 @@
   <div class="center-container-column">
     <header>
       <h1 class="page-title"><a href="/" class="title-link"><%= @title || 'Ramblings' %></a></h1>
+      <div class="sub-title">Kaoru Kohashigwa</div>
       <%= render "shared/navigation" %>
     </header>
     <%= yield %>

@@ -13,6 +13,7 @@ gem 'awesome_print'
 
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
+gem 'font-awesome-sass', '~> 4.2.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -1,3 +1,13 @@
 h1.page-title {
-  text-align: center
+  text-align: center;
+  line-height: 60px;
+  padding-bottom: 7px;
+}
+
+.sub-title {
+  text-align: center;
+  font-family: $body-text-highlight;
+  font-size: 2em;
+  line-height: 20px;
+  margin-bottom: 10px;
 }

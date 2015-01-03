@@ -1,7 +1,11 @@
 <div class="row">
   <div class="col-xs-12">
-    <h1>Code Journey</h1>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, molestiae perferendis possimus unde, sunt, reiciendis libero maxime impedit praesentium culpa dolores dolorem exercitationem recusandae amet molestias debitis officia, at quidem.
+    <% @posts.each do |post| %>
+      <div class="post-container clearfix">
+      <h2 class="post-title"><%= post.title %></h2>
+      <p><%= post.body.html_safe %></p>
+      </div>
+    <% end %>
   </div>
 </div>
 

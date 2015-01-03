@@ -1,2 +1,9 @@
 <%= form_for @post do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_area :body, :class => "tinymce", :rows => 20, :cols => 120 %>
+  <%= f.submit "Submit", :class => "btn btn-primary" %>
+<% end %>
+
+<%= content_for :javascript do %>
+
 <% end %>
