@@ -14,13 +14,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.create(post_params)
+    @post = current_user.posts.includes(:tags).create(post_params)
     update_tags
     redirect_to root_path
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = Post.includes(:tags).find(params[:id])
     @post.update(post_params)
     update_tags
     redirect_to root_path

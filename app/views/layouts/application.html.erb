@@ -2,6 +2,7 @@
 <html>
 <head>
   <title><%= @title || 'Kaoru K' %></title>
+  <meta name="viewport" content="width=device-width">
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
   <meta charset="UTF-8">
@@ -12,8 +13,8 @@
     <header>
       <h1 class="page-title"><a href="/" class="title-link"><%= @title || 'Ramblings' %></a></h1>
       <div class="sub-title">Kaoru Kohashigwa</div>
-      <%= render "shared/navigation" %>
     </header>
+    <%= render "shared/navigation" %>
     <%= yield %>
   </div>
 

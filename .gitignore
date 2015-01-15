@@ -14,3 +14,6 @@
 
 # Ignore database files
 config/database.yml
+
+# Rbenv Ruby Version
+.ruby-version
