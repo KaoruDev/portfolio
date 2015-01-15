@@ -1,4 +1,4 @@
-@import url('//fonts.googleapis.com/css?family=Lato:100,400,700|Josefin+Slab:600|Amatic+SC');
+@import url('//fonts.googleapis.com/css?family=Lato:400,700|Josefin+Slab:600|Amatic+SC');
 
 
 $title-text: 'Amatic SC', sans-serif;
@@ -16,21 +16,26 @@ h2, h3, h4, h5, h6 {
 
 h1 {
   font-family: $title-text;
-  font-size: 5em;
-  @media (min-width: 370px) {
-    font-size: 7em;
+  font-size: 4em;
+  @include breakpoint($screen-md) {
+    font-size: 5em;
   }
 }
 
 h2 {
   font-size: 2.3em;
-
 }
-
 
 body {
   font-family: $body-text;
   color: $text-color-base;
+  font-size: 14px;
+  @include breakpoint($screen-sm) {
+    font-size: 18px;
+  }
+  @include breakpoint($screen-md) {
+    font-size: 20px;
+  }
 }
 
 a {
@@ -40,6 +45,11 @@ a {
   color: $link-color-base;
 }
 
-a:hover {
+a:hover, a.title-link:hover {
   color: #9AA5AB;
+}
+
+a.title-link {
+  font-family: $title-text;
+  color: inherit;
 }

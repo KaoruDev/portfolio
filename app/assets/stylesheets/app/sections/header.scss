@@ -1,3 +1,24 @@
 h1.page-title {
-  text-align: center
+  text-align: center;
+  line-height: 1em;
+  padding-bottom: 7px;
+  &:after {
+    content: "";
+    width: 180px;
+    margin: 0 auto;
+    display: block;
+    height: 2px;
+    background-color: $text-color-base;
+    @include breakpoint($screen-md) {
+      width: 360px;
+    }
+  }
+}
+
+.sub-title {
+  text-align: center;
+  font-family: $body-text-highlight;
+  font-size: 1.6em;
+  line-height: 1em;
+  margin-bottom: 10px;
 }

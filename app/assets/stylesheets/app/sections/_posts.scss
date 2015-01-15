@@ -1,3 +1,29 @@
-.post-title, .post-title-container {
+.post-container {
+  margin-bottom: 100px;
+}
+
+.post-title, .post-title-container, .post-timestamp {
   text-align: center;
+}
+
+.post-title-container {
+  margin-bottom: 50px;
+}
+
+.post-title-inner-container {
+  display: inline-block;
+  position: relative;
+}
+
+.post-title {
+  line-height: 1.2em;
+  display: inline-block;
+}
+
+.post-timestamp {
+  text-align: right;
+  font-size: 1.2em;
+  color: $text-color-highlight;
+  position: absolute;
+  right: 0;
 }

@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.0'
+
 gem 'rails', '4.2.0'
 
 gem 'pg'
@@ -13,6 +15,9 @@ gem 'awesome_print'
 
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
+gem 'font-awesome-sass', '~> 4.2.0'
+gem 'pagedown-bootstrap-rails'
+gem 'will_paginate', '~> 3.0.6'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -21,6 +26,12 @@ group :development, :test do
   gem 'pry'
   gem 'pry-rails'
   gem 'spring'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'faker'
+end
+
+group :test do
+  gem 'fabrication'
 end
 
 group :development do
