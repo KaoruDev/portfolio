@@ -1,7 +1,8 @@
-// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "bootstrap-sprockets";
+@import "bootstrap-sprockets"; // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "config/colors";
+@import "config/theme";
 @import "bootstrap/bootstrap_custom";
 @import "pagedown_bootstrap";
 @import "highlightjs_themes/monokai_sublime";

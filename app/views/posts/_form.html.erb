@@ -10,6 +10,22 @@
   </div>
 
   <div class="form-group">
+    <label>
+      Publish On:
+      <input type="text" class="input-publish-on form-control" value="<%= @post.published_at.strftime("%b %d, %Y") %>">
+      <%= f.hidden_field :published_at %>
+      <span class="publish-display"></span>
+    </label>
+  </div>
+
+  <div class="form-group">
+    <%= f.radio_button :draft, true %>
+    <label for="post_draft_true">Draft</label>
+    <%= f.radio_button :draft, false %>
+    <label for="post_draft_false">Final</label>
+  </div>
+
+  <div class="form-group">
     <%= f.submit "Save", :class => "btn btn-primary" %>
   </div>
 
@@ -21,6 +37,19 @@
 <%= content_for :javascript do %>
   <script>
     !function () {
+      var $publishDisplay = $('.publish-display');
+      var $publishInput = $('.input-publish-on');
+      var $publishVal = $('#post_published_at');
+
+      $publishInput.on('keyup', _.throttle(function (e) {
+        var rawDate = $publishInput.val();
+        var parsed = Date.parse(rawDate);
+        if (parsed) {
+          $publishVal.val(parsed);
+          $publishDisplay.text(parsed.toString('MMM d, yyyy'));
+        }
+      }, 1000));
+
       var converter = new Markdown.Converter();
 
       Markdown.Extra.init(converter);
@@ -29,7 +58,6 @@
 
       var editor = new Markdown.Editor(converter);
       editor.run();
-
     }();
   </script>
 <% end %>

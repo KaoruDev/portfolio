@@ -46,7 +46,7 @@ a {
 }
 
 a:hover, a.title-link:hover {
-  color: #9AA5AB;
+  color: $link-color-hover;
 }
 
 a.title-link {
