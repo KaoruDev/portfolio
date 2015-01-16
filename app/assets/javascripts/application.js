@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require date
 //= require underscore
 //= require backbone
 //= require pagedown_bootstrap
