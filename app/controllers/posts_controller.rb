@@ -10,6 +10,7 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    @post_publish_time = @post.published_at && @post.published_at.strftime("%b %d, %Y")
     render :new
   end
 
@@ -33,7 +34,7 @@ class PostsController < ApplicationController
   private
 
   def update_tags
-    new_tags = params[:tags].split(",")
+    new_tags = params[:tags].split(",").map { |tag| tag.strip.downcase }
     old_tags = @post.tags.pluck(:name)
     diff = old_tags - new_tags
 

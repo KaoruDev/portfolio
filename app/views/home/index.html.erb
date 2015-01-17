@@ -11,7 +11,7 @@
         <p class="post-body clearfix"><%= post.body %></p>
         <p class="tags-container">
           <% post.tags.each do |tag| %>
-            <%= link_to tag.name, "#", :class => "btn btn-info" %>
+            <%= link_to tag.name, "/?tags=#{tag.name}", :class => "btn btn-info btn-lg" %>
           <% end %>
         </p>
         <% if current_user %>

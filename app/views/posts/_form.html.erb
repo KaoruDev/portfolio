@@ -12,7 +12,7 @@
   <div class="form-group">
     <label>
       Publish On:
-      <input type="text" class="input-publish-on form-control" value="<%= @post.published_at.strftime("%b %d, %Y") %>">
+      <input type="text" class="input-publish-on form-control" value="<%= @post_publish_time %>">
       <%= f.hidden_field :published_at %>
       <span class="publish-display"></span>
     </label>
