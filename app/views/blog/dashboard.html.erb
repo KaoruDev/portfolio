@@ -1,12 +1,13 @@
 <div class="row">
   <div class="col-xs-6">
-    <%= link_to "Write New Post", new_post_path %>
+    <%= link_to "Write New Post", new_post_path %> <br>
+    <%= link_to "Log Out", destroy_user_session_path, :method => :delete%>
   </div>
   <div class="col-xs-6">
     <h4>Unpublished Posts</h4>
     <ul>
       <% @unpublished_posts.each do |post| %>
-        <li><%= link_to post.title, edit_post_path(post.id) %></li>
+        <li><%= link_to post.title, edit_post_path(post.id)%></li>
       <% end %>
     </ul>
   </div>
