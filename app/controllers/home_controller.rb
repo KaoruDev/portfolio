@@ -5,9 +5,6 @@ class HomeController < ApplicationController
     @posts = post_tags
   end
 
-  def dashboard
-  end
-
   private
 
   def post_tags
