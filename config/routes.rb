@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :images
 
   get 'dashboard' => 'blog#dashboard', :as => :dashboard
+  get 'about' => 'blog#about', :as => :about
 
   root to: 'home#index'
 end
