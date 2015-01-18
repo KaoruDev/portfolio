@@ -53,3 +53,13 @@ a.title-link {
   font-family: $title-text;
   color: inherit;
 }
+
+blockquote {
+  font-style: italic;
+  padding: 1em;
+  background-color: #efefef;
+  > p {
+    margin: 0;
+  }
+}
+

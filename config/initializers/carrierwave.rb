@@ -5,5 +5,4 @@ CarrierWave.configure do |config|
     :aws_secret_access_key  => ENV["AWS_SECRET"],            # required
   }
   config.fog_directory  = 'kaoru-portfolio-images'           # required
-  config.fog_public     = false                              # optional, defaults to true
 end
