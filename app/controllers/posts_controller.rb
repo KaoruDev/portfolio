@@ -6,11 +6,13 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @images = Image.all
   end
 
   def edit
     @post = Post.find(params[:id])
     @post_publish_time = @post.published_at && @post.published_at.strftime("%b %d, %Y")
+    @images = Image.all
     render :new
   end
 

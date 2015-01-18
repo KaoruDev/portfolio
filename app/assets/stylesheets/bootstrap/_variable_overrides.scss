@@ -289,7 +289,7 @@ $btn-primary-border:             darken($btn-primary-bg, 5%);
 // Small screen / tablet
 //** Deprecated `$screen-sm` as of v3.0.1
 $screen-sm:                  480px;
-// $screen-sm-min:              $screen-sm
+$screen-sm-min:              $screen-sm;
 //** Deprecated `$screen-tablet` as of v3.0.1
 // $screen-tablet:              $screen-sm-min
 
