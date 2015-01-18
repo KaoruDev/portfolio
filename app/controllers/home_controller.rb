@@ -5,15 +5,12 @@ class HomeController < ApplicationController
     @posts = post_tags
   end
 
-  def dashboard
-  end
-
   private
 
   def post_tags
-    posts = Post.includes(:tags).order("posts.created_at desc")
+    posts = Post.order("created_at desc").where("(published_at is NULL or published_at < ?) and draft is not true", Time.now)
     posts = posts.paginate(page: params[:page] || 1, per_page: 5)
-    posts = posts.where(:tags => {name: params[:tags].split(' ')}) if params[:tags]
+    posts = posts.includes(:tags).where(:tags => {name: params[:tags].split(' ')}) if params[:tags]
     posts
   end
 

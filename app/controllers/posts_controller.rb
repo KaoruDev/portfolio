@@ -6,10 +6,13 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @images = Image.all
   end
 
   def edit
     @post = Post.find(params[:id])
+    @post_publish_time = @post.published_at && @post.published_at.strftime("%b %d, %Y")
+    @images = Image.all
     render :new
   end
 
@@ -27,13 +30,15 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post = Post.find_by(id: params[:id])
+    @post.try(:destroy)
     redirect_to root_path
   end
 
   private
 
   def update_tags
-    new_tags = params[:tags].split(",")
+    new_tags = params[:tags].split(",").map { |tag| tag.strip.downcase }
     old_tags = @post.tags.pluck(:name)
     diff = old_tags - new_tags
 

@@ -1,26 +1,81 @@
 <%= form_for @post do |f| %>
-  <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title, :class => "form-control" %>
-  </div>
+  <div class="row">
+    <div class="col-sm-6">
 
-  <div class="form-group">
-    <%= label_tag :tags %>
-    <%= text_field_tag :tags, @post.tags.pluck(:name).join(","), :class => "form-control" %>
-  </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <%= f.label :title %>
+            <%= f.text_field :title, :class => "form-control", :required => true %>
+          </div>
+        </div>
 
-  <div class="form-group">
-    <%= f.submit "Save", :class => "btn btn-primary" %>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label>
+              Publish On: <span class="publish-display"></span>
+              <input type="text" class="input-publish-on form-control" value="<%= @post_publish_time %>">
+              <%= f.hidden_field :published_at %>
+            </label>
+
+            <div class="form-group">
+              <%= f.radio_button :draft, true %>
+              <label for="post_draft_true">Draft</label>&nbsp;&nbsp;
+              <%= f.radio_button :draft, false %>
+              <label for="post_draft_false">Final</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="form-group">
+            <%= label_tag :tags %>
+            <%= text_field_tag :tags, @post.tags.pluck(:name).join(","), :class => "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.submit "Save", :class => "btn btn-primary" %>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="images-container">
+        <% @images.each do |image| %>
+          <%= link_to image.name, image.file.url, :target => "_blank" %> <br>
+        <% end %>
+      </div>
+    </div>
+
   </div>
 
   <div id="wmd-button-bar"></div>
-  <textarea name="post[body]" id="wmd-input" cols="96" rows="20" class="form-control"><%= @post.body %></textarea>
+  <textarea name="post[body]" id="wmd-input" cols="96" rows="20" class="form-control" required><%= @post.body %></textarea>
   <div id="wmd-preview" class="clearfix"></div>
 <% end %>
+
 
 <%= content_for :javascript do %>
   <script>
     !function () {
+      var $publishDisplay = $('.publish-display');
+      var $publishInput = $('.input-publish-on');
+      var $publishVal = $('#post_published_at');
+
+      $publishInput.on('keyup', _.throttle(function (e) {
+        var rawDate = $publishInput.val();
+        var parsed = Date.parse(rawDate);
+        if (parsed) {
+          $publishVal.val(parsed);
+          $publishDisplay.text(parsed.toString('MMM d, yyyy'));
+        }
+      }, 1000));
+
       var converter = new Markdown.Converter();
 
       Markdown.Extra.init(converter);
@@ -29,7 +84,6 @@
 
       var editor = new Markdown.Editor(converter);
       editor.run();
-
     }();
   </script>
 <% end %>
