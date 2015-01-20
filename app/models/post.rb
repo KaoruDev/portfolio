@@ -4,4 +4,10 @@ class Post < ActiveRecord::Base
   has_many :tags, :as => :taggable, :dependent => :destroy
 
   validates_presence_of :title, :body
+  before_save :generate_slug
+
+  def generate_slug
+    self.slug = "#{self.title.downcase.gsub(' ', '-')}-#{Time.now.to_i}"
+  end
+
 end
