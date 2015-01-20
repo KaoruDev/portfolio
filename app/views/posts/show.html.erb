@@ -1,0 +1,38 @@
+<div class="post-container">
+  <div class="post-title-container">
+    <div class="post-title-inner-container">
+      <h2 class="post-title"><%= @post.title %></h2><br>
+      <span class="post-timestamp"><%= @post.updated_at.strftime("%b %d, %Y") %></span>
+    </div>
+  </div>
+  <p class="post-body clearfix"><%= @post.body %></p>
+  <p class="tags-container">
+    <% @post.tags.each do |tag| %>
+      <%= link_to tag.name, "/?tags=#{tag.name}", :class => "btn btn-info btn-lg" %>
+    <% end %>
+  </p>
+  <% if current_user %>
+    <div class="post-action-container">
+      <%= link_to "edit", edit_post_path(post) %> |
+      <%= link_to "delete", post_path(post), :method => :delete %>
+    </div>
+  <% end %>
+</div>
+
+<%= content_for :javascript do %>
+  <script>
+    !function () {
+      var converter = new Markdown.Converter();
+
+      Markdown.Extra.init(converter);
+
+      utils.setupMarkdownHooks(converter);
+
+      $('.post-body').each(function (idx, el) {
+        var $el = $(el);
+        $el.html(converter.makeHtml($el.text()));
+      });
+
+    } ();
+  </script>
+<% end %>

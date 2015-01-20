@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, :except => [:show]
+  before_action :find_post, :only => [:show, :edit, :destroy, :update]
 
-  def index
+  def show
+    render :show, :locals => { post: @post }
   end
 
   def new
@@ -10,7 +12,6 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
     @post_publish_time = @post.published_at && @post.published_at.strftime("%b %d, %Y")
     @images = Image.all
     render :new
@@ -23,19 +24,22 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.includes(:tags).find(params[:id])
     @post.update(post_params)
     update_tags
     redirect_to root_path
   end
 
   def destroy
-    @post = Post.find_by(id: params[:id])
     @post.try(:destroy)
     redirect_to root_path
   end
 
   private
+
+  def find_post
+    @post = Post.find_by(id: params[:id])
+    redirect_to root_path if @post.nil?
+  end
 
   def update_tags
     new_tags = params[:tags].split(",").map { |tag| tag.strip.downcase }
