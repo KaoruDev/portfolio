@@ -5,6 +5,9 @@ class HomeController < ApplicationController
     @posts = post_tags
   end
 
+  def about
+  end
+
   private
 
   def post_tags
