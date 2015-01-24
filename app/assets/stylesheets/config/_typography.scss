@@ -31,6 +31,10 @@ h3 {
   font-size: 2em;
 }
 
+h4 {
+  font-size: 1.6em;
+}
+
 body {
   font-family: $body-text;
   color: $text-color-base;
@@ -66,5 +70,13 @@ blockquote {
   > p {
     margin: 0;
   }
+}
+
+strong.highlight {
+  color: $text-color-strong-highlight;
+}
+
+p {
+  margin: 0;
 }
 

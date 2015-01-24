@@ -1,7 +1,7 @@
 
 <h2 class="text-center">the SKINNY</h2>
 
-<h2 class="text-center">WORKED ON</h2>
+<h2 class="text-center">building for</h2>
 <div class="row">
   <div class="col-md-4">
     <div><img class="spredfast-logo" src="https://kaoru-portfolio-images.s3.amazonaws.com/image/31/Spredfast-Logo.png" alt=""></div>
@@ -11,6 +11,11 @@
   <div class="col-md-4">
     <div><img class="makersquare-logo" src="https://kaoru-portfolio-images.s3.amazonaws.com/image/32/MakerSquare-logo.png" alt=""></div>
     <h3 class="text-center">MakerSquare</h3>
+      <p>
+        Connecting graduates with job openning is a daunting task. An internal tool, the Recruit App is a repository of companies, job opennings and students currently seeking jobs.
+        Built on <strong class="highlight">Rails</strong> the app allows students to create profiles to manage their <a href="https://recruit.makersquare.com/?v=kkohashigawa2" target="_blank">online profile</a>.
+        Team members of career services can quickly query through users, company and positions. Search uses <strong class="highlight">Backbone</strong> to filter and drill down to specific profiles.
+      </p>
   </div>
 
   <div class="col-md-4">
@@ -22,9 +27,30 @@
 </div>
 
 <h2 class="text-center">SKILL TREE</h2>
-<div class="row">
+<div class="row skill-tree-row">
   <div class="col-xs-12">
-    <i class="icon-backbone"></i>
+    <h4>On a daily I use...</h4>
+    <div class="skill-tree-list clearfix">
+      <%= list_skills(:daily) %>
+    </div>
+  </div>
+</div>
+
+<div class="row skill-tree-row">
+  <div class="col-xs-12">
+    <h4>Would love to get more familiar with...</h4>
+    <div class="skill-tree-list clearfix">
+      <%= list_skills(:familiar) %>
+    </div>
+  </div>
+</div>
+
+<div class="row skill-tree-row">
+  <div class="col-xs-12">
+    <h4>Excited to learn...</h4>
+    <div class="skill-tree-list clearfix">
+      <%= list_skills(:wanted) %>
+    </div>
   </div>
 </div>
 

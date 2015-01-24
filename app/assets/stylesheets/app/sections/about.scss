@@ -9,3 +9,28 @@
 .sureup-logo {
   background-color: #0E2940;
 }
+
+
+// SKILL TREE SECTION
+
+.skill-tree-row {
+  margin-bottom: 50px;
+}
+
+.skill-tree-list {
+  padding: 0px 60px;
+  i {
+    display: inline-block;
+    min-height: 100px;
+    &:before {
+      font-size: 5em;
+    }
+  }
+
+  .skill {
+    float: left;
+    margin: 0px auto;
+    width: 130px;
+  }
+
+}
