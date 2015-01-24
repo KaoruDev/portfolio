@@ -1,50 +1,54 @@
 {
   "checksum": {
-    "previous": "6dec5373f52b0358c40700c923d629c9e3642d6be48c379c16f497f27d312098",
-    "current": "6dec5373f52b0358c40700c923d629c9e3642d6be48c379c16f497f27d312098"
+    "previous": "8f990143ce3dec6c49c33929b0b91d41b3942944e7680a8d60f1d0001bf4110f",
+    "current": "8f990143ce3dec6c49c33929b0b91d41b3942944e7680a8d60f1d0001bf4110f"
   },
   "fonts": [
-    "app/assets/fonts/fontcustom_6dec5373f52b0358c40700c923d629c9.ttf",
-    "app/assets/fonts/fontcustom_6dec5373f52b0358c40700c923d629c9.svg",
-    "app/assets/fonts/fontcustom_6dec5373f52b0358c40700c923d629c9.woff",
-    "app/assets/fonts/fontcustom_6dec5373f52b0358c40700c923d629c9.eot"
+    "app/assets/fonts/fontcustom_8f990143ce3dec6c49c33929b0b91d41.ttf",
+    "app/assets/fonts/fontcustom_8f990143ce3dec6c49c33929b0b91d41.svg",
+    "app/assets/fonts/fontcustom_8f990143ce3dec6c49c33929b0b91d41.woff",
+    "app/assets/fonts/fontcustom_8f990143ce3dec6c49c33929b0b91d41.eot"
   ],
   "glyphs": {
-    "backbonejs-plain": {
-      "codepoint": 61699,
-      "source": "vendor/assets/font_vectors/backbonejs-plain.svg"
+    "backbone": {
+      "codepoint": 61706,
+      "source": "vendor/assets/fonts/font_vectors/backbone.svg"
     },
-    "bootstrap-plain": {
-      "codepoint": 61700,
-      "source": "vendor/assets/font_vectors/bootstrap-plain.svg"
+    "bootstrap": {
+      "codepoint": 61707,
+      "source": "vendor/assets/fonts/font_vectors/bootstrap.svg"
     },
-    "css3-plain": {
-      "codepoint": 61701,
-      "source": "vendor/assets/font_vectors/css3-plain.svg"
+    "css3": {
+      "codepoint": 61708,
+      "source": "vendor/assets/fonts/font_vectors/css3.svg"
     },
-    "git-plain": {
-      "codepoint": 61702,
-      "source": "vendor/assets/font_vectors/git-plain.svg"
+    "git": {
+      "codepoint": 61709,
+      "source": "vendor/assets/fonts/font_vectors/git.svg"
     },
-    "javascript-plain": {
-      "codepoint": 61703,
-      "source": "vendor/assets/font_vectors/javascript-plain.svg"
+    "jquery": {
+      "codepoint": 61710,
+      "source": "vendor/assets/fonts/font_vectors/jquery.svg"
     },
-    "jquery-plain": {
-      "codepoint": 61704,
-      "source": "vendor/assets/font_vectors/jquery-plain.svg"
+    "js": {
+      "codepoint": 61711,
+      "source": "vendor/assets/fonts/font_vectors/js.svg"
     },
-    "photoshop-plain": {
-      "codepoint": 61705,
-      "source": "vendor/assets/font_vectors/photoshop-plain.svg"
+    "photoshop": {
+      "codepoint": 61712,
+      "source": "vendor/assets/fonts/font_vectors/photoshop.svg"
     },
-    "rails-plain": {
-      "codepoint": 61697,
-      "source": "vendor/assets/font_vectors/rails-plain.svg"
+    "rails": {
+      "codepoint": 61713,
+      "source": "vendor/assets/fonts/font_vectors/rails.svg"
     },
-    "ruby-plain": {
-      "codepoint": 61698,
-      "source": "vendor/assets/font_vectors/ruby-plain.svg"
+    "ruby": {
+      "codepoint": 61714,
+      "source": "vendor/assets/fonts/font_vectors/ruby.svg"
+    },
+    "sass": {
+      "codepoint": 61715,
+      "source": "vendor/assets/fonts/font_vectors/sass.svg"
     }
   },
   "options": {
@@ -59,8 +63,8 @@
     "font_name": "fontcustom",
     "force": false,
     "input": {
-      "templates": "vendor/assets/font_vectors",
-      "vectors": "vendor/assets/font_vectors"
+      "templates": "vendor/assets/fonts/font_vectors",
+      "vectors": "vendor/assets/fonts/font_vectors"
     },
     "no_hash": false,
     "output": {
@@ -68,15 +72,13 @@
       "fonts": "app/assets/fonts",
       "preview": "tmp/"
     },
-    "preprocessor_path": null,
+    "preprocessor_path": "",
     "quiet": false,
     "templates": [
-      "css",
-      "preview"
+      "scss-rails"
     ]
   },
   "templates": [
-    "app/assets/stylesheets/fontcustom.css",
-    "tmp/fontcustom-preview.html"
+    "app/assets/stylesheets/_fontcustom-rails.scss"
   ]
 }

@@ -5,6 +5,7 @@ class HomeController < ApplicationController
 
   def about
     redirect_to root_path if current_user.nil?
+    @title = "About"
   end
 
   private

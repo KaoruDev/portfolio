@@ -1,0 +1,59 @@
+//
+// Icon Font: fontcustom
+//
+
+@font-face {
+  font-family: "fontcustom";
+  src: font-url("fontcustom_8f990143ce3dec6c49c33929b0b91d41.eot");
+  src: font-url("fontcustom_8f990143ce3dec6c49c33929b0b91d41.eot?#iefix") format("embedded-opentype"),
+       font-url("fontcustom_8f990143ce3dec6c49c33929b0b91d41.woff") format("woff"),
+       font-url("fontcustom_8f990143ce3dec6c49c33929b0b91d41.ttf") format("truetype"),
+       font-url("fontcustom_8f990143ce3dec6c49c33929b0b91d41.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "fontcustom";
+    src: font-url("fontcustom_8f990143ce3dec6c49c33929b0b91d41.svg#fontcustom") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-backbone:before,
+.icon-bootstrap:before,
+.icon-css3:before,
+.icon-git:before,
+.icon-jquery:before,
+.icon-js:before,
+.icon-photoshop:before,
+.icon-rails:before,
+.icon-ruby:before,
+.icon-sass:before {
+  display: inline-block;
+  font-family: "fontcustom";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-backbone:before { content: "\f10a"; }
+.icon-bootstrap:before { content: "\f10b"; }
+.icon-css3:before { content: "\f10c"; }
+.icon-git:before { content: "\f10d"; }
+.icon-jquery:before { content: "\f10e"; }
+.icon-js:before { content: "\f10f"; }
+.icon-photoshop:before { content: "\f110"; }
+.icon-rails:before { content: "\f111"; }
+.icon-ruby:before { content: "\f112"; }
+.icon-sass:before { content: "\f113"; }

@@ -46,8 +46,8 @@
 # -----------------------------------------------------------------------------
 
 input:
- vectors: vendor/assets/font_vectors
- # templates: my/templates
+ vectors: vendor/assets/fonts/font_vectors
+ # templates: vendor/assets/fonts/templates
 
 output:
  fonts: app/assets/fonts
@@ -70,12 +70,12 @@ output:
 #   Default: css, preview
 # -----------------------------------------------------------------------------
 
-#templates:
-#- scss-rails
+templates:
+- scss-rails
 #- preview
 #- my-custom-template.yml
 
-#preprocessor_path: ../fonts/
+preprocessor_path: ""
 
 
 # -----------------------------------------------------------------------------
