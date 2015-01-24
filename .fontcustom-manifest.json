@@ -1,0 +1,82 @@
+{
+  "checksum": {
+    "previous": "6dec5373f52b0358c40700c923d629c9e3642d6be48c379c16f497f27d312098",
+    "current": "6dec5373f52b0358c40700c923d629c9e3642d6be48c379c16f497f27d312098"
+  },
+  "fonts": [
+    "app/assets/fonts/fontcustom_6dec5373f52b0358c40700c923d629c9.ttf",
+    "app/assets/fonts/fontcustom_6dec5373f52b0358c40700c923d629c9.svg",
+    "app/assets/fonts/fontcustom_6dec5373f52b0358c40700c923d629c9.woff",
+    "app/assets/fonts/fontcustom_6dec5373f52b0358c40700c923d629c9.eot"
+  ],
+  "glyphs": {
+    "backbonejs-plain": {
+      "codepoint": 61699,
+      "source": "vendor/assets/font_vectors/backbonejs-plain.svg"
+    },
+    "bootstrap-plain": {
+      "codepoint": 61700,
+      "source": "vendor/assets/font_vectors/bootstrap-plain.svg"
+    },
+    "css3-plain": {
+      "codepoint": 61701,
+      "source": "vendor/assets/font_vectors/css3-plain.svg"
+    },
+    "git-plain": {
+      "codepoint": 61702,
+      "source": "vendor/assets/font_vectors/git-plain.svg"
+    },
+    "javascript-plain": {
+      "codepoint": 61703,
+      "source": "vendor/assets/font_vectors/javascript-plain.svg"
+    },
+    "jquery-plain": {
+      "codepoint": 61704,
+      "source": "vendor/assets/font_vectors/jquery-plain.svg"
+    },
+    "photoshop-plain": {
+      "codepoint": 61705,
+      "source": "vendor/assets/font_vectors/photoshop-plain.svg"
+    },
+    "rails-plain": {
+      "codepoint": 61697,
+      "source": "vendor/assets/font_vectors/rails-plain.svg"
+    },
+    "ruby-plain": {
+      "codepoint": 61698,
+      "source": "vendor/assets/font_vectors/ruby-plain.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": "fontcustom.yml",
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "fontcustom",
+    "force": false,
+    "input": {
+      "templates": "vendor/assets/font_vectors",
+      "vectors": "vendor/assets/font_vectors"
+    },
+    "no_hash": false,
+    "output": {
+      "css": "app/assets/stylesheets",
+      "fonts": "app/assets/fonts",
+      "preview": "tmp/"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "css",
+      "preview"
+    ]
+  },
+  "templates": [
+    "app/assets/stylesheets/fontcustom.css",
+    "tmp/fontcustom-preview.html"
+  ]
+}
