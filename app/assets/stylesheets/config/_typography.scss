@@ -61,6 +61,9 @@ a:hover, a.title-link:hover {
 a.title-link {
   font-family: $title-text;
   color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 blockquote {

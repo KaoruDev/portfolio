@@ -1,8 +1,15 @@
 h1.page-title {
   text-align: center;
   line-height: 1em;
-  padding-bottom: 7px;
-  text-decoration: underline;
+  margin-bottom: 10px;
+  &:after {
+    content: " ";
+    height: 1px;
+    max-width: 400px;
+    background-color: $text-color-base;
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .sub-title {
