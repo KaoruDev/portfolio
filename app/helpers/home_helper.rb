@@ -21,6 +21,7 @@ module HomeHelper
     [:bower, "Bower"],
     [:requirejs, "Require JS"],
     [:redis, "Redis"],
+    [:streamline, "Cassandra"],
     [:postgresql, "Postgres"],
     [:terminal, "Bash"]
   ]
