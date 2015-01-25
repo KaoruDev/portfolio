@@ -4,7 +4,6 @@ class HomeController < ApplicationController
   end
 
   def about
-    redirect_to root_path if current_user.nil? && params[:lucky_stars] != "bohemian_dance"
     @title = "About"
   end
 
