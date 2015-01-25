@@ -1,8 +1,11 @@
 class HomeController < ApplicationController
-  before_action :authenticate_user!, :except => [:index]
-
   def index
     @posts = post_tags
+  end
+
+  def about
+    redirect_to root_path if current_user.nil? && params[:lucky_stars] != "bohemian_dance"
+    @title = "About"
   end
 
   private

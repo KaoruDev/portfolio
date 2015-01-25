@@ -1,0 +1,51 @@
+.about-section {
+  margin: 200px 0;
+}
+
+.spredfast-logo {
+  background-color: #fff;
+}
+
+.makersquare-logo {
+  background-color: #fff;
+}
+
+.sureup-logo {
+  background-color: #0E2940;
+}
+
+
+// SKILL TREE SECTION
+
+.skills-section {
+  background-color: #ccc;
+  padding: 50px;
+}
+
+.skill-tree-row {
+  margin-bottom: 50px;
+}
+
+.skill-tree-list {
+  padding: 0px 60px;
+
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  i {
+    display: inline-block;
+    min-height: 100px;
+    &:before {
+      font-size: 5em;
+    }
+  }
+
+  .skill {
+    text-align: center;
+    float: left;
+    margin: 0px auto;
+    width: 130px;
+  }
+
+}

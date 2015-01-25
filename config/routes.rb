@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :posts, :except => [:show] do
     collection do
+      get '/new' => 'posts#new' # catch new posts before it reaches slug
       get '/:slug' => 'posts#show'
     end
   end
@@ -11,5 +12,6 @@ Rails.application.routes.draw do
 
   get 'dashboard' => 'blog#dashboard', :as => :dashboard
 
+  get 'about' => 'home#about', :as => :about
   root to: 'home#index'
 end

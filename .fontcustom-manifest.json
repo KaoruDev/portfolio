@@ -1,0 +1,84 @@
+{
+  "checksum": {
+    "previous": "8f990143ce3dec6c49c33929b0b91d41b3942944e7680a8d60f1d0001bf4110f",
+    "current": "8f990143ce3dec6c49c33929b0b91d41b3942944e7680a8d60f1d0001bf4110f"
+  },
+  "fonts": [
+    "app/assets/fonts/fontcustom_8f990143ce3dec6c49c33929b0b91d41.ttf",
+    "app/assets/fonts/fontcustom_8f990143ce3dec6c49c33929b0b91d41.svg",
+    "app/assets/fonts/fontcustom_8f990143ce3dec6c49c33929b0b91d41.woff",
+    "app/assets/fonts/fontcustom_8f990143ce3dec6c49c33929b0b91d41.eot"
+  ],
+  "glyphs": {
+    "backbone": {
+      "codepoint": 61706,
+      "source": "vendor/assets/fonts/font_vectors/backbone.svg"
+    },
+    "bootstrap": {
+      "codepoint": 61707,
+      "source": "vendor/assets/fonts/font_vectors/bootstrap.svg"
+    },
+    "css3": {
+      "codepoint": 61708,
+      "source": "vendor/assets/fonts/font_vectors/css3.svg"
+    },
+    "git": {
+      "codepoint": 61709,
+      "source": "vendor/assets/fonts/font_vectors/git.svg"
+    },
+    "jquery": {
+      "codepoint": 61710,
+      "source": "vendor/assets/fonts/font_vectors/jquery.svg"
+    },
+    "js": {
+      "codepoint": 61711,
+      "source": "vendor/assets/fonts/font_vectors/js.svg"
+    },
+    "photoshop": {
+      "codepoint": 61712,
+      "source": "vendor/assets/fonts/font_vectors/photoshop.svg"
+    },
+    "rails": {
+      "codepoint": 61713,
+      "source": "vendor/assets/fonts/font_vectors/rails.svg"
+    },
+    "ruby": {
+      "codepoint": 61714,
+      "source": "vendor/assets/fonts/font_vectors/ruby.svg"
+    },
+    "sass": {
+      "codepoint": 61715,
+      "source": "vendor/assets/fonts/font_vectors/sass.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": "fontcustom.yml",
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "fontcustom",
+    "force": false,
+    "input": {
+      "templates": "vendor/assets/fonts/font_vectors",
+      "vectors": "vendor/assets/fonts/font_vectors"
+    },
+    "no_hash": false,
+    "output": {
+      "css": "app/assets/stylesheets",
+      "fonts": "app/assets/fonts",
+      "preview": "tmp/"
+    },
+    "preprocessor_path": "",
+    "quiet": false,
+    "templates": [
+      "scss-rails"
+    ]
+  },
+  "templates": [
+    "app/assets/stylesheets/_fontcustom-rails.scss"
+  ]
+}
