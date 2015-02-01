@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     end
   end
 
+
   resources :images
 
   get 'dashboard' => 'blog#dashboard', :as => :dashboard

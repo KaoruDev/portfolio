@@ -7,8 +7,10 @@ class Post < ActiveRecord::Base
   before_save :generate_slug
 
   def generate_slug
-    time_stamp = self.published_at || self.created_at || Time.now
-    self.slug = "#{self.title.downcase.gsub(' ', '-')}-#{time_stamp.to_i}"
+    if self.slug.nil?
+      time_stamp = self.published_at || self.created_at || Time.now
+      self.slug = "#{time_stamp.strftime("%m-%d-%Y")}-#{self.title.downcase.gsub(' ', '-')}"
+    end
   end
 
 end
