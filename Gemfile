@@ -16,7 +16,7 @@ gem 'awesome_print'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 4.2.0'
-gem 'pagedown-bootstrap-rails', git: "https://github.com/KaoruDev/pagedown-bootstrap-rails.git"
+gem 'pagedown-bootstrap-rails'
 gem 'will_paginate', '~> 3.0.6'
 gem 'carrierwave'
 gem "mini_magick"

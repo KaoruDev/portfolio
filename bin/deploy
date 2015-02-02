@@ -1,0 +1,4 @@
+if rspec
+then
+  git push heroku master
+fi
