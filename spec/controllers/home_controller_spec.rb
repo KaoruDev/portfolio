@@ -78,6 +78,14 @@ RSpec.describe HomeController, :type => :controller do
 
       expect(post.tags).to match_array(tags)
     end
+  end
 
+  describe 'GET #about' do
+    it 'will respond with a 200' do
+      get :about
+
+      expect(response).to be_success
+      expect(response).to have_http_status(200)
+    end
   end
 end
