@@ -7,7 +7,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @images = Image.all
+    @images = Image.order('created_at desc').first(10)
   end
 
   def edit
