@@ -10,7 +10,7 @@ class HomeController < ApplicationController
   private
 
   def list_of_posts
-    posts = Post.order("posts.created_at desc").where("(published_at is NULL or published_at < ?) and draft is not true", Time.now)
+    posts = Post.order("posts.published_at desc").where("published_at < ? and draft is not true", Time.now)
     posts = posts.paginate(page: params[:page] || 1, per_page: 5)
     posts = filter_by_tags(posts) if params[:tags]
     posts
