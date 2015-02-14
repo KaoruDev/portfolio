@@ -2,6 +2,11 @@
   margin-bottom: 100px;
 }
 
+.post-title a {
+  font-size: inherit;
+  font-family: inherit;
+}
+
 .post-title, .post-title-container, .post-timestamp {
   text-align: center;
 }
