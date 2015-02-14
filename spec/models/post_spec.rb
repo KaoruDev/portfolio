@@ -8,5 +8,23 @@ RSpec.describe Post do
 
       expect(post.published_at).not_to be_nil
     end
+
+    it 'will always default to created_at' do
+      created_at = 1.hour.ago
+      post = Post.new(author: Fabricate(:user), title: "Fake title", body: "fakey fakye fakye", created_at: created_at)
+      post.save
+
+      expect(post.published_at).to be(created_at)
+    end
+
+    it 'will not override published at if set' do
+      created_at = 2.hours.ago
+      now = Time.now
+      post = Post.new(author: Fabricate(:user), title: "Fake title", body: "Fakey fakyfe faye", created_at: created_at, published_at: now)
+      post.save
+
+      expect(post.published_at.to_i).to be(now.to_i)
+    end
+
   end
 end
