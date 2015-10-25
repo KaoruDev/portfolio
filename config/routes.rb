@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  get "/wedding" => "weddings#index"
+
   resources :posts, :except => [:show] do
     collection do
       get '/new' => 'posts#new' # catch new posts before it reaches slug
       get '/:slug' => 'posts#show'
     end
   end
-
 
   resources :images
 
