@@ -1,4 +1,5 @@
 .main-content {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 2rem);
+  padding-bottom: 20rem;
 }
