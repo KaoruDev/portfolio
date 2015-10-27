@@ -1,0 +1,54 @@
+.hero-banner-container {
+  $first-breakpoint: 500px;
+
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  @media (min-width: $first-breakpoint) {
+    height: 70rem;
+  }
+
+  .hero-image {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -30rem;
+    z-index: -100;
+
+    // iphone 5 portrait
+    @media(min-width: 360px) {
+      left: -34rem;
+    }
+
+    // iphone 6 portrait
+    @media (min-width: 414px) {
+      left: -39rem;
+    }
+
+    @media (min-width: $first-breakpoint) {
+      left: -21rem;
+      height: 37.5rem
+    }
+  }
+
+  .hero-title {
+    border: 0.3rem solid $font-color-inverse;
+    bottom: 0;
+    color: $font-color-inverse;
+    font-size: 2.3rem;
+    padding: 1rem 3rem;
+    position: absolute;
+    width: 25rem;
+    left: calc((100% - 25rem) / 2);
+
+    @media (min-width: $first-breakpoint) {
+    }
+
+    @media (min-width: 650px) {
+      margin: 7rem 3rem 0 auto;
+    }
+  }
+}
