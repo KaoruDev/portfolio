@@ -1,0 +1,24 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-headers;
+}
+
+$local-font-size-list: $font-size-h1 $font-size-h2 $font-size-h3 $font-size-h4 $font-size-h5 $font-size-h6;
+
+@each $font-header-size in $local-font-size-list {
+  $i: index($local-font-size-list, $font-header-size);
+
+  h#{$i} {
+    font-size: $font-header-size;
+    margin: 0;
+  }
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+p {
+ margin: 1rem 0;
+}
+
+

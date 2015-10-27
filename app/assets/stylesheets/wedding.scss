@@ -1,0 +1,24 @@
+// Configs
+@import "weddings/configs";
+@import "weddings/configs/fonts";
+@import "weddings/configs/theme";
+
+// Vendors
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "bootstrap-sprockets"; // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "weddings/vendors/bootstrap_custom";
+
+// Base
+
+@import "weddings/base/reset";
+@import "weddings/base/typography";
+
+// Components
+
+@import "weddings/components/nav";
+@import "weddings/components/hero_banner";
+@import "weddings/components/main_content";
+@import "weddings/components/sections";
+
+
