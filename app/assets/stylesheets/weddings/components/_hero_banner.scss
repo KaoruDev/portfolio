@@ -6,50 +6,51 @@
   height: 100%;
   width: 100%;
 
-  @media (min-width: $first-breakpoint) {
-    height: 70rem;
-  }
+  background-image: url("https://scontent.fsnc1-1.fna.fbcdn.net/hphotos-xfa1/t31.0-8/830447_10151805818063712_1132729123_o.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 
-  .hero-image {
-    width: auto;
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.15);
     height: 100%;
     position: absolute;
+    width: 100%;
     top: 0;
-    left: -30rem;
-    z-index: -100;
-
-    // iphone 5 portrait
-    @media(min-width: 360px) {
-      left: -34rem;
-    }
-
-    // iphone 6 portrait
-    @media (min-width: 414px) {
-      left: -39rem;
-    }
-
-    @media (min-width: $first-breakpoint) {
-      left: -21rem;
-      height: 37.5rem
-    }
   }
 
   .hero-title {
-    border: 0.3rem solid $font-color-inverse;
     bottom: 0;
     color: $font-color-inverse;
-    font-size: 2.3rem;
     margin-bottom: 1rem;
     padding: 1rem 3rem;
     position: absolute;
     width: 25rem;
     left: calc((100% - 25rem) / 2);
+    text-align: center;
 
-    @media (min-width: $first-breakpoint) {
+    h1 {
+      font-size: 2.3rem;
     }
 
-    @media (min-width: 650px) {
-      margin: 7rem 3rem 0 auto;
+    h4 {
+      font-size: 2rem;
+    }
+
+    @media (min-width: $first-breakpoint) {
+      width: 46rem;
+      left: calc((100% - 46rem) / 2);
+      margin-bottom: 3rem;
+      padding: 2rem 4rem;
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      h4 {
+        font-size: 2.8rem;
+      }
     }
   }
 }
+
