@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(user)
     dashboard_path
   end
+
+  def generate_title(title)
+    "Kaoru K - #{title.capitalize}"
+  end
 end

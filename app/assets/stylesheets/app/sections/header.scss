@@ -1,7 +1,17 @@
 h1.page-title {
   text-align: center;
-  line-height: 1em;
   margin-bottom: 10px;
+
+  a {
+    display: block;
+
+    div:last-child {
+      font-size: 32px;
+      display: block;
+      margin-top: -36px;
+    }
+  }
+
   &:after {
     content: " ";
     height: 1px;
@@ -14,7 +24,6 @@ h1.page-title {
 
 .sub-title {
   text-align: center;
-  font-family: $body-text-highlight;
   font-size: 1.6em;
   line-height: 1em;
   margin-bottom: 10px;

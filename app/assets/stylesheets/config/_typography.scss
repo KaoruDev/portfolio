@@ -1,9 +1,19 @@
-@import url('//fonts.googleapis.com/css?family=Lato:400,700|Josefin+Slab:600|Amatic+SC');
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300);
 
+@font-face {
+    font-family: 'code_bold';
+    src: url('code_bold-webfont.eot');
+    src: url('code_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('code_bold-webfont.woff2') format('woff2'),
+         url('code_bold-webfont.woff') format('woff'),
+         url('code_bold-webfont.ttf') format('truetype'),
+         url('code_bold-webfont.svg#code_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
-$title-text: 'Amatic SC', sans-serif;
-$body-text: 'Lato', sans-serif;
-$body-text-highlight: 'Josefin Slab', serif;
+$font-family-headers: 'code_bold', sans-serif;
+$font-family-body: 'Robot Slab', serif;
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -11,37 +21,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2, h3, h4, h5, h6 {
-  font-family: $body-text-highlight;
+  font-family: $font-family-headers;
 }
 
 h1 {
-  font-family: $title-text;
-  font-size: 4em;
+  font-family: $font-family-headers;
+  font-size: 60px;
   @include breakpoint($screen-md) {
-    font-size: 5em;
+    font-size: 60px;
   }
 }
 
 h2 {
-  font-size: 3.6em;
-  font-family: $title-text;
+  font-size: 50px;
+  font-family: $font-family-headers;
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 40px;
 }
 
 h4 {
-  font-size: 1.6em;
+  font-size: 30px;
 }
 
 body {
-  font-family: $body-text;
+  font-family: $font-family-body;
   color: $text-color-base;
-  font-size: 14px;
+  font-size: 18px;
+
   @include breakpoint($screen-sm) {
     font-size: 18px;
   }
+
   @include breakpoint($screen-md) {
     font-size: 20px;
   }
@@ -49,7 +61,7 @@ body {
 
 a {
   text-decoration: none;
-  font-family: $body-text-highlight;
+  font-family: $font-family-body;
   font-size: 1.2em;
   color: $link-color-base;
 }
@@ -59,7 +71,7 @@ a:hover, a.title-link:hover {
 }
 
 a.title-link {
-  font-family: $title-text;
+  font-family: $font-family-headers;
   color: inherit;
   &:hover {
     text-decoration: none;

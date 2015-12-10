@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= @title || 'Kaoru K' %></title>
+  <title><%= @title || 'Kaoru K - Motivation | Code | Life' %></title>
+
   <meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8">
+
+  <%= render "shared/social_media_tags" %>
+
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
-  <meta charset="UTF-8">
 </head>
 <body>
 
   <div class="center-container-column">
     <header>
-      <h1 class="page-title"><a href="/" class="title-link"><%= @title || 'Ramblings' %></a></h1>
-      <div class="sub-title">Kaoru Kohashigwa</div>
+
+      <h1 class="page-title">
+        <a href="/" class="title-link">
+          <div>Kaoru</div>
+          <div>Kohashigawa</div>
+        </a>
+      </h1>
+
+      <div class="sub-title text-uppercase">
+        Motivation, Code, &amp; Stuff
+      </div>
+
     </header>
     <%= render "shared/navigation" %>
     <%= yield %>
