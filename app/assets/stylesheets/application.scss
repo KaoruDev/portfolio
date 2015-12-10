@@ -1,7 +1,8 @@
 @import "devicons";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "bootstrap-sprockets"; // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+ // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
 @import "config/colors";
 @import "config/theme";
 @import "bootstrap/bootstrap_custom";
