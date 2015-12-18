@@ -41,6 +41,7 @@ end
 group :development do
   gem 'rack-livereload'
   gem 'guard-livereload', require: false
+  gem 'guard-rspec', require: false
 end
 
 group :production do
