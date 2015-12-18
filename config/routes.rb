@@ -3,6 +3,12 @@ Rails.application.routes.draw do
 
   get "/wedding" => "weddings#index"
 
+  namespace :projects do
+    get "/" => "home#index"
+
+    get "/connect_four" => "connect_four#show", :as => :connect_four
+  end
+
   resources :posts, :except => [:show] do
     collection do
       get '/new' => 'posts#new' # catch new posts before it reaches slug
