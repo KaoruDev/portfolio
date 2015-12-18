@@ -8,7 +8,7 @@
 
   <%= render "shared/social_media_tags" %>
 
-  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -32,7 +32,7 @@
     <%= yield %>
   </div>
 
-  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag 'projects/connect_four' %>
   <%= yield :javascript %>
 </body>
 </html>
