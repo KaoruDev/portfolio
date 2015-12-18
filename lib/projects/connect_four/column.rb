@@ -13,8 +13,13 @@ module Projects
       end
 
       def add_piece(piece)
+        return if filled?
         @spaces[@next_space] = piece
         @next_space -= 1
+      end
+
+      def filled?
+        @next_space < 0
       end
 
     end
