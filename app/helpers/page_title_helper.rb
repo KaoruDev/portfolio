@@ -1,7 +1,7 @@
 module PageTitleHelper
   def page_title
     subtitle = if @post
-      @post.title.capitalize
+      @post.title.to_s.capitalize
     else
       "Motivation | Code | Life"
     end
