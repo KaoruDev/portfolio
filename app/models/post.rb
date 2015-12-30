@@ -20,9 +20,9 @@ class Post < ActiveRecord::Base
   end
 
   def generate_slug
-    if self.slug.nil?
+    if self.slug.nil? || self.title_changed?
       time_stamp = self.published_at || self.created_at || Time.now
-      self.slug = "#{time_stamp.strftime("%m-%d-%Y")}-#{self.title.downcase.gsub(' ', '-')}"
+      self.slug = "#{time_stamp.strftime("%m-%d-%Y")}-#{CGI.escape(self.title.downcase.gsub(' ', '-'))}"
     end
   end
 

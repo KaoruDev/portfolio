@@ -36,7 +36,7 @@ class PostsController < ApplicationController
   private
 
   def find_post
-    @post = Post.includes(:tags).find_by(slug: params[:slug]) if params[:slug]
+    @post = Post.includes(:tags).find_by(slug: CGI.escape(params[:slug])) if params[:slug]
     @post ||= Post.includes(:tags).find_by(id: params[:id])
     redirect_to root_path if @post.nil?
   end
