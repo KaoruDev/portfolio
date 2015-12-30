@@ -14,6 +14,11 @@ class Post < ActiveRecord::Base
     markdown_render.render(without_html)
   end
 
+  def banner
+    md = body.match(/\!\[.+\]\((.+)\)/)
+    md && md[1]
+  end
+
   def generate_slug
     if self.slug.nil?
       time_stamp = self.published_at || self.created_at || Time.now
