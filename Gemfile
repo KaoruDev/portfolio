@@ -4,29 +4,37 @@ ruby '2.2.3'
 
 gem 'rails', '4.2.0'
 
+# Ops =================================
+#
 gem 'pg'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'jquery-rails'
 gem 'unicorn'
 
-gem 'devise'
-gem 'awesome_print'
+# Assets ==============================
 
-gem 'bootstrap-sass', '~> 3.3.3'
 gem 'autoprefixer-rails'
+gem 'bootstrap-sass', '~> 3.3.3'
 gem 'font-awesome-sass', '~> 4.2.0'
+gem 'jquery-rails'
 gem 'pagedown-bootstrap-rails'
-gem 'will_paginate', '~> 3.0.6'
-gem 'carrierwave'
-gem "mini_magick"
-gem 'fog'
-gem 'figaro'
+gem 'sass-rails', '~> 5.0'
+gem 'uglifier', '>= 1.3.0'
 
+# App =================================
+
+gem 'carrierwave'
+gem 'devise'
+gem 'figaro'
+gem 'fog'
+gem 'redcarpet'
+gem "mini_magick"
+gem 'will_paginate', '~> 3.0.6'
+
+#=======================================
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'awesome_print'
   gem 'pry'
   gem 'pry-rails'
   gem 'spring'
