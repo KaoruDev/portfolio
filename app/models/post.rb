@@ -1,3 +1,5 @@
+require "redcarpet/render_strip"
+
 class Post < ActiveRecord::Base
   belongs_to :author, :class_name => "User", :foreign_key => "user_id", :required => true
 
@@ -5,6 +7,12 @@ class Post < ActiveRecord::Base
 
   validates_presence_of :title, :body
   before_save :generate_slug, :set_published_at
+
+  def plain_body
+    without_images = body.gsub(/\!?\[.+\]\(.+\)/, '').gsub(/\s{2,}/, '')
+    without_html = html_sanitizer.sanitize(without_images)
+    markdown_render.render(without_html)
+  end
 
   def generate_slug
     if self.slug.nil?
@@ -18,5 +26,16 @@ class Post < ActiveRecord::Base
       self.published_at = self.created_at || Time.now
     end
   end
+
+  private
+
+  def html_sanitizer
+    @html_sanitizer ||= Rails::Html::FullSanitizer.new
+  end
+
+  def markdown_render
+    @markdown_render ||= Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
+  end
+
 
 end
