@@ -1,0 +1,28 @@
+.logo {
+  @keyframes spin {
+    from { transform: translateX(0) rotate(0deg); }
+    to   { transform: translateX(-23px) rotate(-360deg); }
+  }
+
+  a {
+    display: block;
+    color: $second-color;
+  }
+
+  .logo-front {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  &[data-state="short"] {
+    .logo-details {
+      display: none;
+    }
+
+    .logo-front {
+      animation: 0.3s linear 1 spin;
+      transform: translateX(-23px);
+      color: $first-color;
+    }
+  }
+}
