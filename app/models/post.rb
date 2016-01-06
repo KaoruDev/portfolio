@@ -11,7 +11,7 @@ class Post < ActiveRecord::Base
   def plain_body
     without_images = body.to_s.gsub(/\!?\[.+\]\(.+\)/, '').gsub(/\s{2,}/, '')
     without_html = html_sanitizer.sanitize(without_images)
-    markdown_render.render(without_html)
+    markdown_render.render(without_html).strip
   end
 
   def banner
