@@ -56,6 +56,5 @@ RSpec.describe PostsController, :type => :controller do
         expect(assigns(:images)).to match_array(images)
       end
     end
-
   end
 end

@@ -9,13 +9,13 @@ class Post < ActiveRecord::Base
   before_save :generate_slug, :set_published_at
 
   def plain_body
-    without_images = body.gsub(/\!?\[.+\]\(.+\)/, '').gsub(/\s{2,}/, '')
+    without_images = body.to_s.gsub(/\!?\[.+\]\(.+\)/, '').gsub(/\s{2,}/, '')
     without_html = html_sanitizer.sanitize(without_images)
     markdown_render.render(without_html)
   end
 
   def banner
-    md = body.match(/\!\[.+\]\((.+)\)/)
+    md = body.to_s.match(/\!\[.+\]\((.+)\)/)
     md && md[1]
   end
 
