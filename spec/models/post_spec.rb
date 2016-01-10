@@ -36,7 +36,7 @@ RSpec.describe Post do
 
     it 'will strip markdown from the body' do
       post =  Fabricate(:post, :body => "![image](placekitten.com/300/300)I **love** food!")
-      expect(post.plain_body).to eq("I love food!\n I love food")
+      expect(post.plain_body).to eq("I love food!")
     end
   end
 
