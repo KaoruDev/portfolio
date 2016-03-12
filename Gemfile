@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.3'
+ruby '2.3.0'
 
 gem 'rails', '4.2.0'
 
@@ -28,6 +28,7 @@ gem 'fog'
 gem 'redcarpet'
 gem "mini_magick"
 gem 'will_paginate', '~> 3.0.6'
+gem 'nokogiri', '~> 1.6.8rc2' # https://github.com/rubygems/rubygems/issues/1389
 
 #=======================================
 # Use Capistrano for deployment
