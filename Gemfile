@@ -7,7 +7,7 @@ gem 'rails', '4.2.0'
 # Ops =================================
 #
 gem 'pg'
-gem 'unicorn'
+gem 'puma'
 
 # Assets ==============================
 
@@ -38,7 +38,6 @@ group :development, :test do
   gem 'awesome_print'
   gem 'pry'
   gem 'pry-rails'
-  gem 'spring'
   gem 'rspec-rails', '~> 3.0'
   gem 'faker'
 end
