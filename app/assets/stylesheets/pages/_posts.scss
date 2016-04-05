@@ -2,11 +2,6 @@
   margin-bottom: 100px;
 }
 
-.post-title a {
-  font-size: inherit;
-  font-family: inherit;
-}
-
 .post-title, .post-title-container, .post-timestamp {
   text-align: center;
 }
@@ -21,8 +16,10 @@
 }
 
 .post-title {
-  line-height: 1.2em;
-  display: inline-block;
+  a {
+    font-size: inherit;
+    font-family: inherit;
+  }
 }
 
 .post-timestamp {
