@@ -14,9 +14,15 @@
 
 // Base =====================================
 @import "base/typography";
+@import "base/grid";
 
-// App ? ====================================
-@import "app/global";
-@import "app/sections";
-@import "app/pagination";
+// Components ===============================
+@import "components/header";
+@import "components/pagination";
 
+// Layout ===================================
+@import "layout/navigation";
+
+// Pages ====================================
+@import "pages/about";
+@import "pages/posts";
