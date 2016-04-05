@@ -1,19 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300);
+@import url(https://fonts.googleapis.com/css?family=Oswald|Muli:300);
 
-@font-face {
-    font-family: 'code_bold';
-    src: asset_url('code_bold-webfont.eot');
-    src: asset_url('code_bold-webfont.eot?#iefix') format('embedded-opentype'),
-         asset_url('code_bold-webfont.woff2') format('woff2'),
-         asset_url('code_bold-webfont.woff') format('woff'),
-         asset_url('code_bold-webfont.ttf') format('truetype'),
-         asset_url('code_bold-webfont.svg#code_boldregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-$font-family-headers: 'code_bold', sans-serif;
-$font-family-body: 'Robot Slab', serif;
+$font-family-headers: 'Oswald', sans-serif;
+$font-family-body: 'Muli', sans-serif;
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -87,11 +75,15 @@ blockquote {
   }
 }
 
+code {
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  background: #ddd;
+  display: inline-block;
+  font-size: 0.9em;
+  padding: 0px 8px;
+}
+
 strong.highlight {
   color: $text-color-strong-highlight;
 }
-
-p {
-  margin: 0;
-}
-

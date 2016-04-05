@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, :except => [:show]
-  before_action :find_post, :except => [:new, :create]
+  before_action :authenticate_user!, :except => [:index, :show]
+  before_action :find_post, :except => [:index, :new, :create]
+
+  def index
+    @posts = list_of_posts
+  end
 
   def show
   end
@@ -55,6 +59,13 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit!
+  end
+
+  def list_of_posts
+    posts = Post.order("posts.published_at desc").where("published_at < ? and draft is not true", Time.now)
+    posts = posts.paginate(page: params[:page] || 1, per_page: 5)
+    posts = filter_by_tags(posts) if params[:tags]
+    posts
   end
 
 end
