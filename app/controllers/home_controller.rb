@@ -2,10 +2,6 @@ class HomeController < ApplicationController
   def index
   end
 
-  def about
-    @title = "About"
-  end
-
   private
 
   def filter_by_tags(posts)

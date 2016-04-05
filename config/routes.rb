@@ -12,6 +12,5 @@ Rails.application.routes.draw do
 
   get 'dashboard' => 'blog#dashboard', :as => :dashboard
 
-  get 'about' => 'home#about', :as => :about
   root to: 'home#index'
 end
