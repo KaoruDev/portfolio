@@ -19,3 +19,8 @@
 //= require pagedown_bootstrap
 //= require highlight.pack.js
 //= require utils
+
+window.$(function () {
+  var email = ['.com', 'kaoruk', '@', 'dev'].reverse().join('');
+  window.$('.email').attr('href', 'mailto:' + email).text(email);
+});

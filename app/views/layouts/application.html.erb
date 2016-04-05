@@ -14,9 +14,8 @@
 </head>
 <body>
 
-  <div class="center-container-column">
-    <%= yield %>
-  </div>
+  <%= yield %>
+  <%= render "shared/footer" %>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= yield :javascripts %>

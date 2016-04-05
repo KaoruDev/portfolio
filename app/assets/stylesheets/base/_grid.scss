@@ -1,5 +1,5 @@
 .center-container-column {
-  max-width: 1200px;
+  max-width: $center-column-width;
   margin: 0 auto;
-  padding: 20px;
+  padding: $center-column-padding;
 }

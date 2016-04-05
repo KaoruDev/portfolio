@@ -1,0 +1,70 @@
+<section class="hero-container home-container">
+  <h1 class="text-uppercase">
+    <span>Kaoru</span><br>
+    <span class="sub">Kohashigawa</span>
+  </h1>
+  <nav>
+    <%= link_to "summary", "#summary"%> |
+    <%= link_to "blog", posts_path %> |
+    <%= link_to "mentorship", "/mentorship" %>
+  </nav>
+</section>
+
+<a name="summary"></a>
+<section class="summary-container home-container text-center">
+  <h2>Summary</h2>
+  <div class="contant-links">
+    <%= render "shared/contact_info" %>
+  </div>
+
+  <p class="center-container-column">
+    Software Enthusiast based in the Bay Area.
+  </p>
+
+  <p class="center-container-column">
+    Helping companies turn ideas into amazing products.
+  </p>
+
+  <p class="center-container-column">
+    Self-starter all about the #hustle.
+  </p>
+
+  <p class="center-container-column">
+    Mentors coding students.
+  </p>
+
+  <p class="center-container-column">
+    Believes learning is a lifelong event.
+  </p>
+
+  <h4>My Values:</h4>
+  <ul class="text-left core-values-list">
+    <li>Principles over Feelings</li>
+    <li>Triple Double</li>
+    <li>Listening before Speaking</li>
+    <li>Long road is less traveled</li>
+  </ul>
+</section>
+
+<section class="home-container">
+  <div class="center-container-column">
+    <div class="row skill-tree-row">
+      <div class="col-xs-12">
+      <h2 class="text-center">Tools <i class="fa fa-hand-spock-o"></i></h2>
+        <h4>On the daily...</h4>
+        <div class="skill-tree-list clearfix">
+          <%= list_skills(:daily) %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row skill-tree-row">
+      <div class="col-xs-12">
+        <h4>Would love to get more familiar with...</h4>
+        <div class="skill-tree-list clearfix">
+          <%= list_skills(:familiar) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

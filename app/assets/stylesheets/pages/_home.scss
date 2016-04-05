@@ -1,0 +1,36 @@
+.home-container {
+  min-height: 100vh;
+  padding: 50px 30px;
+}
+
+.hero-container {
+  $sub-font-size: 0.463em;
+  text-align: right;
+
+  h1 {
+    margin-top: calc(50vh - #{$center-column-padding * 8});
+    line-height: $sub-font-size;
+
+    @include breakpoint($screen-lg) {
+      font-size: 120px;
+    }
+
+    .sub {
+      font-size: $sub-font-size;
+    }
+  }
+}
+
+.summary-container {
+  background-color: #555;
+  color: $off-white;
+
+  h4 {
+    color: $first-color;
+  }
+}
+
+.core-values-list {
+  margin: 20px auto 0;
+  width: 300px;
+}

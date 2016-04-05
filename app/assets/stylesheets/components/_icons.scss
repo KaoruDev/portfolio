@@ -1,0 +1,18 @@
+.skill-container {
+  font-size: 12px;
+  height: 84px;
+  margin: 15px;
+  width: 50px;
+
+  @include breakpoint($screen-md) {
+    font-size: 16px;
+    width: 80px;
+  }
+}
+.skill-icon {
+  display: inline-block;
+}
+
+.small-icon {
+  width: 30px;
+}

@@ -14,14 +14,11 @@ h2, h3, h4, h5, h6 {
 
 h1 {
   font-family: $font-family-headers;
-  font-size: 60px;
-  @include breakpoint($screen-md) {
-    font-size: 60px;
-  }
+  font-size: 72px;
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 60px;
   font-family: $font-family-headers;
 }
 

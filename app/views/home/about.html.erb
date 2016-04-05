@@ -85,14 +85,6 @@
     </div>
   </div>
 
-  <div class="row skill-tree-row">
-    <div class="col-xs-12">
-      <h4>Excited to learn...</h4>
-      <div class="skill-tree-list clearfix">
-        <%= list_skills(:wanted) %>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section class="about-section">
@@ -127,14 +119,3 @@
     </div>
   </div>
 </section>
-
-<%= content_for :javascript do %>
-  <script>
-    !function () {
-      var email = ['.com', 'kaoruk', '@', 'dev'].reverse().join('');
-      $('.email').attr('href', 'mailto:' + email).text(email);
-    }();
-  </script>
-<% end %>
-
-

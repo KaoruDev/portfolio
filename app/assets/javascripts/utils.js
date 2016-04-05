@@ -1,8 +1,11 @@
-!function () {
-  window.utils = window.utils || {};
+(function () {
+  var utils = window.utils = window.utils || {};
+  var $ = window.$;
+  var _ = window._;
+  var hljs = window.hljs;
 
   _.templateSettings = {
-    interpolate: /\{\{(.+?)\}\}/g
+    interpolate: /\{\{(.+?)\}\}/g,
   };
 
   var imageClassHook = function (text) {
@@ -11,6 +14,7 @@
       text = text.replace(matches[0], '');
       text = text.replace(/\/>/, 'class="' + matches[1] + '" />');
     }
+
     return text;
   };
 
@@ -22,7 +26,7 @@
     }
 
     timer = setTimeout(function () {
-      $('pre code').each(function(i, block) {
+      $('pre code').each(function (i, block) {
          hljs.highlightBlock(block);
        });
     }, 100);
@@ -35,4 +39,4 @@
     converter.hooks.chain('postConversion', initHightlights);
   };
 
-} ();
+})();

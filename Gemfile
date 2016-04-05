@@ -12,7 +12,7 @@ gem 'pg'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3.3'
-gem 'font-awesome-sass', '~> 4.2.0'
+gem 'font-awesome-sass', '~> 4.5.0'
 gem 'jquery-rails'
 gem 'pagedown-bootstrap-rails'
 gem 'sass-rails', '~> 5.0'
