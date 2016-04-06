@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Oswald|Muli:300);
+@import url(https://fonts.googleapis.com/css?family=Oswald|Muli:400,300);
 
 $font-family-headers: 'Oswald', sans-serif;
 $font-family-body: 'Muli', sans-serif;
@@ -32,6 +32,7 @@ h4 {
 
 body {
   font-family: $font-family-body;
+  font-weight: 300;
   color: $text-color-base;
   font-size: 18px;
 

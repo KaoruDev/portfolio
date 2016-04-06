@@ -18,12 +18,13 @@
 
 // Components ===============================
 @import "components/header";
-@import "components/pagination";
 @import "components/icons";
+@import "components/inverse_section";
+@import "components/pagination";
 
 // Layout ===================================
-@import "layout/navigation";
 @import "layout/footer";
+@import "layout/navigation";
 
 // Pages ====================================
 @import "pages/home";
