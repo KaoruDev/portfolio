@@ -1,47 +1,183 @@
-<div class="row">
-  <div class="col-md-8 col-md-offset-2">
-    <% @posts.each do |post| %>
-      <div class="post-container">
-        <div class="post-title-container">
-          <div class="post-title-inner-container">
-            <h3 class="post-title"><%= link_to post.title, "/posts/#{post.slug}" %></h3>
-            <span class="post-timestamp"><%= (post.published_at || post.updated_at).strftime("%b %d, %Y") %></span>
-          </div>
-        </div>
-        <p class="post-body clearfix"><%= post.body %></p>
-        <p class="tags-container">
-          <% post.tags.each do |tag| %>
-            <%= link_to tag.name, "/?tags=#{tag.name}", :class => "btn btn-info btn-lg" %>
-          <% end %>
-        </p>
-        <% if current_user %>
-          <div class="post-action-container">
-            <%= link_to "edit", edit_post_path(post) %> |
-            <%= link_to "delete", post_path(post), :method => :delete %>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+<section class="hero-container home-container">
+  <%= render "shared/navigation" %>
+</section>
 
-    <%= will_paginate @posts, :inner_window => 1, :next_label => '<i class="fa fa-arrow-circle-right"></i>', :previous_label => '<i class="fa fa-arrow-circle-left"></i>' %>
+<a name="summary"></a>
+<section class="summary-container home-container text-center inverse-section">
+  <h2>Summary</h2>
+  <div class="contant-links">
+    <%= render "shared/contact_info" %>
   </div>
-</div>
 
-<%= content_for :javascript do %>
-  <script>
-    !function () {
-      var converter = new Markdown.Converter();
+  <p class="center--column">
+    Software Enthusiast based in the Bay Area.
+  </p>
 
-      Markdown.Extra.init(converter);
+  <p class="center--column">
+    Helping companies turn ideas into amazing products.
+  </p>
 
-      utils.setupMarkdownHooks(converter);
+  <p class="center--column">
+    Self-starter all about the <strong>#hustle</strong>.
+  </p>
 
-      $('.post-body').each(function (idx, el) {
-        var $el = $(el);
-        $el.html(converter.makeHtml($el.text()));
-      });
+  <p class="center--column">
+    Mentors coding students.
+  </p>
 
-    } ();
-  </script>
-<% end %>
+  <p class="center--column">
+    Believes learning is a lifelong event.
+  </p>
 
+  <h4>My Values:</h4>
+  <ul class="text-left core-values-list">
+    <li>Principles over Feelings</li>
+    <li>Triple Double</li>
+    <li>Listening before Speaking</li>
+    <li>Long road is less traveled</li>
+  </ul>
+</section>
+
+<section class="home-container">
+  <div class="center-column">
+    <h2 class="text-center">Tools <i class="fa fa-hand-spock-o"></i></h2>
+    <h4>On the daily...</h4>
+    <div class="skills-list clearfix">
+      <%= list_skills(:daily) %>
+    </div>
+
+    <h4>Would love to get more familiar with...</h4>
+    <div class="skills-list clearfix">
+      <%= list_skills(:familiar) %>
+    </div>
+  </div>
+</section>
+
+<section class="home-container">
+  <h2 class="text-center">Work Experience</h2>
+  <div class="work-exp-container clearfix">
+    <div class="work-col employer-info">
+      <h3>Binti</h3>
+      <h4>Software Engineer</h4>
+      <p>
+        <a href="https://binti.com" target="_blank">Binti.com</a><br>
+        February 26th, 2016<br>
+        April 4th, 2016
+      </p>
+    </div>
+    <div class="work-col">
+      <p>
+        Implement an in-app messaging with spam filter to allow users to safely
+        and annonmously send messages which increase confidence
+        among both accepting parents and expecting parents.
+      </p>
+      <p>
+        Added features to admin app to improve productivity of team.
+      </p>
+      <p>
+        Actively participated in product development and sustainability.
+      </p>
+      <hr>
+      <p>
+        <strong>Ruby on Rails</strong>,
+        <strong>Javascript</strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="work-exp-container clearfix">
+    <div class="work-col employer-info">
+      <h3>Firehose Project</h3>
+      <h4>Team Lead / Mentor</h4>
+      <p>
+        <a href="https://thefirehoseproject.com" target="_blank">theFirehoseProject.com</a><br>
+        October 2015<br>
+        Current
+      </p>
+    </div>
+    <div class="work-col">
+      <p>
+        Lead weekly scrum meetings with a group of novice programmers. We
+        develop a web chess application over several weeks. We go through
+        TDD, git and github collaboration, ticket management flow via Trello and
+        any programming problems they encounter throughout the week.
+      </p>
+
+      <p>
+        I also mentor students one on one. Individual attention allows me to
+        prepare them for an engineering position
+        as they go through the firehose curriculum. Past students have
+        successfully obtain jobs as web developers.
+      </p>
+
+      <hr>
+      <p>
+        <strong>Ruby on Rails</strong>,
+        <strong>Mentorship</strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="work-exp-container clearfix">
+    <div class="work-col employer-info">
+      <h3>Inside</h3>
+      <h4>Senior Web Developer</h4>
+      <p>
+        <a href="https://inside.com" target="_blank">Inside.com</a><br>
+        April 2015<br>
+        February 2016
+      </p>
+    </div>
+    <div class="work-col">
+      <p>
+        Work with a highly skilled team led by
+        <a href="https://en.wikipedia.org/wiki/Jason_Calacanis" target="_blank">Jason Calacanis</a>.
+        Architect of a popular Chrome extention that doubled our user base.
+        Quickly pivoted to develop an email CMS which helped gain a high open
+        rate on a 100k+ email list. Develop a system to deploy vertical sites
+        in a short amount of time and little configuration, that helped land
+        the company's first high profile contract.
+      </p>
+      <hr>
+      <p>
+        <strong>Ruby on Rails</strong>,
+        <strong>Javascript</strong>,
+        <strong>Chrome Extension</strong>,
+        <strong>Email Campaigns</strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="work-exp-container clearfix">
+    <div class="work-col employer-info">
+      <h3>Spredfast</h3>
+      <h4>Software Engineer</h4>
+      <p>
+        <a href="https://www.spredfast.com" target="_blank">Spredfast.com</a><br>
+        December 2013<br>
+        April 2015
+      </p>
+    </div>
+    <div class="work-col">
+      <p>
+        Provided great value and support to multiple teams from the very beginning.
+        Cut development time on relaunch of a core product by fixing bugs
+        and building new features.
+      </p>
+      <p>
+        An essential part of a team who developed a new product, Social Echo Graph,
+        with a high ROI and success for our client.
+      </p>
+      <p>
+        Improved on admin tool to increase
+        productivity of the customer relations team improving overall
+        client satisfaction.
+      </p>
+      <hr>
+      <p>
+        <strong>Ruby on Rails</strong>,
+        <strong>Javascript</strong>
+      </p>
+    </div>
+  </div>
+</section>

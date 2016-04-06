@@ -1,7 +1,11 @@
-<nav>
-  <a href="/" class="nav-link">home</a>
-  <%= link_to "About", about_path, :class => "nav-link" %>
-  <% if current_user %>
-    <%= link_to "Dashboard", dashboard_path, :class => "nav-link" %>
-  <% end %>
-</nav>
+<div class="top-nav-container">
+  <h1 class="text-uppercase">
+    <span>Kaoru</span><br>
+    <span class="sub">Kohashigawa</span>
+  </h1>
+  <nav>
+    <%= link_to "home", root_path %> |
+    <%= link_to "blog", posts_path %> |
+    <%= link_to "mentorship", "/mentorship" %>
+  </nav>
+</div>

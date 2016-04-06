@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald|Muli:400,300);
+
+$font-family-headers: 'Oswald', sans-serif;
+$font-family-body: 'Muli', sans-serif;
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: $font-family-headers;
+}
+
+h1 {
+  font-family: $font-family-headers;
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 60px;
+  font-family: $font-family-headers;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+body {
+  font-family: $font-family-body;
+  font-weight: 300;
+  color: $text-color-base;
+  font-size: 20px;
+
+  @include breakpoint($screen-md) {
+    font-size: 22px;
+  }
+}
+
+a {
+  text-decoration: none;
+  font-family: $font-family-body;
+  font-size: 1.2em;
+  color: $link-color-base;
+}
+
+a:hover, a.title-link:hover {
+  color: $link-color-hover;
+}
+
+a.title-link {
+  font-family: $font-family-headers;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+blockquote {
+  font-style: italic;
+  padding: 1em;
+  background-color: #efefef;
+  > p {
+    margin: 0;
+  }
+}
+
+code {
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  background: #ddd;
+  display: inline-block;
+  font-size: 0.9em;
+  padding: 0px 8px;
+}
+
+strong.highlight {
+  color: $text-color-strong-highlight;
+}

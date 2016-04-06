@@ -1,0 +1,35 @@
+.post-container {
+  padding: $section-padding;
+  margin-bottom: 100px;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.post-title-container {
+  h3 a {
+    font-size: inherit;
+    font-family: inherit;
+  }
+
+  .post-timestamp {
+    color: $text-color-highlight;
+  }
+}
+
+.post-body {
+  p {
+    margin-bottom: 2em;
+  }
+}
+
+.tags-container {
+  a:after {
+    content: ",";
+  }
+
+  a:last-child:after {
+    content: "";
+  }
+}

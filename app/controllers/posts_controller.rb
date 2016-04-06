@@ -1,18 +1,20 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, :except => [:show]
-  before_action :find_post, :except => [:new, :create]
+  before_action :authenticate_user!, :except => [:index, :show]
+  before_action :find_post, :except => [:index, :new, :create]
+
+  def index
+    @posts = list_of_posts
+  end
 
   def show
   end
 
   def new
     @post = Post.new
-    @images = Image.order('created_at desc').first(10)
   end
 
   def edit
     @post_publish_time = @post.published_at && @post.published_at.strftime("%b %d, %Y")
-    @images = Image.all
     render :new
   end
 
@@ -55,6 +57,17 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit!
+  end
+
+  def list_of_posts
+    posts = Post.order("posts.published_at desc").where("published_at < ? and draft is not true", Time.now)
+    posts = posts.paginate(page: params[:page] || 1, per_page: 5)
+    posts = filter_by_tags(posts) if params[:tags]
+    posts
+  end
+
+  def filter_by_tags(posts)
+    posts.where(id: Tag.where(name: params[:tags], taggable_type: "Post").pluck(:taggable_id))
   end
 
 end

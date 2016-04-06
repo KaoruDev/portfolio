@@ -1,0 +1,9 @@
+<script>
+  !function () {
+    $('.post-body').each(function (idx, el) {
+      var $el = $(el);
+      $el.html(window.marked($el.text()));
+    });
+
+  } ();
+</script>

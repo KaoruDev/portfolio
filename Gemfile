@@ -2,20 +2,18 @@ source 'https://rubygems.org'
 
 ruby '2.3.0'
 
-gem 'rails', '4.2.0'
+gem 'rails', '4.2.6'
 
 # Ops =================================
-#
+
 gem 'pg'
-gem 'puma'
 
 # Assets ==============================
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3.3'
-gem 'font-awesome-sass', '~> 4.2.0'
+gem 'font-awesome-sass', '~> 4.5.0'
 gem 'jquery-rails'
-gem 'pagedown-bootstrap-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 
@@ -36,7 +34,6 @@ gem 'nokogiri', '~> 1.6.8rc2' # https://github.com/rubygems/rubygems/issues/1389
 
 group :development, :test do
   gem 'awesome_print'
-  gem 'pry'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.0'
   gem 'faker'
@@ -52,5 +49,6 @@ group :development do
 end
 
 group :production do
+  gem 'puma'
   gem 'rails_12factor'
 end

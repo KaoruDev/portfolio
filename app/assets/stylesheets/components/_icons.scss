@@ -1,0 +1,17 @@
+.small-icon {
+  width: 30px;
+}
+
+.embedded-icon {
+  margin-bottom: -9px;
+}
+
+.icon-link:hover {
+  text-decoration: none;
+}
+
+.github-icon-inverse {
+  g {
+    fill: $text-color-inverse;
+  }
+}

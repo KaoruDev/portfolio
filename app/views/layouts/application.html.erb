@@ -14,26 +14,10 @@
 </head>
 <body>
 
-  <div class="center-container-column">
-    <header>
-
-      <h1 class="page-title">
-        <a href="/" class="title-link">
-          <div>Kaoru</div>
-          <div>Kohashigawa</div>
-        </a>
-      </h1>
-
-      <div class="sub-title text-uppercase">
-        Motivation, Code, &amp; Stuff
-      </div>
-
-    </header>
-    <%= render "shared/navigation" %>
-    <%= yield %>
-  </div>
+  <%= yield %>
+  <%= render "shared/footer" %>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= yield :javascript %>
+  <%= yield :javascripts %>
 </body>
 </html>

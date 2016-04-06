@@ -12,6 +12,6 @@ Rails.application.routes.draw do
 
   get 'dashboard' => 'blog#dashboard', :as => :dashboard
 
-  get 'about' => 'home#about', :as => :about
+  get 'mentorship' => 'home#mentorship', :as => :mentorship
   root to: 'home#index'
 end
