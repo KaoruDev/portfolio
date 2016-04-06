@@ -1,10 +1,19 @@
-<div class="row">
-  <div class="col-md-8 col-md-offset-2">
-    <% @posts.each do |post| %>
-      <%= render "post", post: post %>
-    <% end %>
+<div class="center-column">
+  <%= render "shared/navigation" %>
+</div>
 
-    <%= will_paginate @posts, :inner_window => 1, :next_label => '<i class="fa fa-arrow-circle-right"></i>', :previous_label => '<i class="fa fa-arrow-circle-left"></i>' %>
+<div class="posts-container">
+  <% @posts.each do |post| %>
+    <%= render "post", post: post %>
+  <% end %>
+</div>
+
+<div class="center-column clearfix">
+  <div class="pull-right">
+    <%= will_paginate @posts,
+      :inner_window => 1,
+      :next_label => '<i class="fa fa-arrow-circle-right"></i>',
+      :previous_label => '<i class="fa fa-arrow-circle-left"></i>' %>
   </div>
 </div>
 

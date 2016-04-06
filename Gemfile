@@ -14,7 +14,6 @@ gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'font-awesome-sass', '~> 4.5.0'
 gem 'jquery-rails'
-gem 'pagedown-bootstrap-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 

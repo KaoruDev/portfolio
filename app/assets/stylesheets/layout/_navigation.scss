@@ -1,9 +1,17 @@
-.nav-link {
-  display: inline-block;
-  padding: 0 15px;
-  text-transform: uppercase;
-  border-right: 1px solid $text-color-base;
-  &:last-child {
-    border-right: none;
+.top-nav-container {
+  $sub-font-size: 0.463em;
+  text-align: right;
+  padding-top: 40px;
+
+  h1 {
+    line-height: $sub-font-size;
+
+    @include breakpoint($screen-lg) {
+      font-size: 120px;
+    }
+
+    .sub {
+      font-size: $sub-font-size;
+    }
   }
 }

@@ -11,12 +11,10 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @images = Image.order('created_at desc').first(10)
   end
 
   def edit
     @post_publish_time = @post.published_at && @post.published_at.strftime("%b %d, %Y")
-    @images = Image.all
     render :new
   end
 

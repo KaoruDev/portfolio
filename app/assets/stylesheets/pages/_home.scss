@@ -8,20 +8,8 @@
 }
 
 .hero-container {
-  $sub-font-size: 0.463em;
-  text-align: right;
-
   h1 {
-    margin-top: calc(50vh - #{$section-padding * 8});
-    line-height: $sub-font-size;
-
-    @include breakpoint($screen-lg) {
-      font-size: 120px;
-    }
-
-    .sub {
-      font-size: $sub-font-size;
-    }
+    margin-top: calc(50vh - #{$section-padding * 10});
   }
 }
 

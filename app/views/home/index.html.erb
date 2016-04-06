@@ -1,12 +1,5 @@
 <section class="hero-container home-container">
-  <h1 class="text-uppercase">
-    <span>Kaoru</span><br>
-    <span class="sub">Kohashigawa</span>
-  </h1>
-  <nav>
-    <%= link_to "blog", posts_path %> |
-    <%= link_to "mentorship", "/mentorship" %>
-  </nav>
+  <%= render "shared/navigation" %>
 </section>
 
 <a name="summary"></a>
@@ -16,23 +9,23 @@
     <%= render "shared/contact_info" %>
   </div>
 
-  <p class="center-container-column">
+  <p class="center--column">
     Software Enthusiast based in the Bay Area.
   </p>
 
-  <p class="center-container-column">
+  <p class="center--column">
     Helping companies turn ideas into amazing products.
   </p>
 
-  <p class="center-container-column">
+  <p class="center--column">
     Self-starter all about the <strong>#hustle</strong>.
   </p>
 
-  <p class="center-container-column">
+  <p class="center--column">
     Mentors coding students.
   </p>
 
-  <p class="center-container-column">
+  <p class="center--column">
     Believes learning is a lifelong event.
   </p>
 
@@ -46,7 +39,7 @@
 </section>
 
 <section class="home-container">
-  <div class="center-container-column">
+  <div class="center-column">
     <h2 class="text-center">Tools <i class="fa fa-hand-spock-o"></i></h2>
     <h4>On the daily...</h4>
     <div class="skills-list clearfix">

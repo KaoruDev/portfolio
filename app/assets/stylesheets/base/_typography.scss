@@ -34,14 +34,10 @@ body {
   font-family: $font-family-body;
   font-weight: 300;
   color: $text-color-base;
-  font-size: 18px;
-
-  @include breakpoint($screen-sm) {
-    font-size: 18px;
-  }
+  font-size: 20px;
 
   @include breakpoint($screen-md) {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
