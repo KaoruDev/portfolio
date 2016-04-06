@@ -256,8 +256,6 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     orm_adapter (0.5.0)
-    pagedown-bootstrap-rails (2.1.2)
-      railties (> 3.1)
     pg (0.18.4)
     pkg-config (1.1.7)
     pry (0.10.3)
@@ -376,7 +374,6 @@ DEPENDENCIES
   jquery-rails
   mini_magick
   nokogiri (~> 1.6.8rc2)
-  pagedown-bootstrap-rails
   pg
   pry-rails
   puma
