@@ -2,6 +2,9 @@ class HomeController < ApplicationController
   def index
   end
 
+  def mentorship
+  end
+
   private
 
   def filter_by_tags(posts)
