@@ -5,7 +5,7 @@ module PageTitleHelper
     elsif @title
       @title
     else
-      "Mentorship | Code | Culture"
+      "Software Engineer - Kaoru K"
     end
 
     "Kaoru K - #{subtitle}"
