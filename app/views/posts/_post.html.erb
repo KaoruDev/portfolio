@@ -14,7 +14,7 @@
         </span><br>
 
         <% post.tags.each do |tag| %>
-          <%= link_to tag.name, "/?tags=#{tag.name}" %>
+          <%= link_to tag.name, "/posts?tags=#{tag.name}" %>
         <% end %>
       </p>
       <% if current_user %>
