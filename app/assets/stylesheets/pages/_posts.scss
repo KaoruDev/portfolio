@@ -25,6 +25,8 @@
 }
 
 .tags-container {
+  margin-bottom: 0;
+
   a:after {
     content: ",";
   }
@@ -33,3 +35,8 @@
     content: "";
   }
 }
+
+.deep-link {
+  font-size: 0.8em;
+}
+

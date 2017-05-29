@@ -28,7 +28,7 @@ module HomeHelper
     [:svgs_docker, "Docker"],
     [:svgs_bash, "Bash"],
     [:elixir, "Elixir"],
-    [:svgs_linux, "Unix / Linux"],
+    [:svgs_linux, "Linux"],
     [:svgs_jenkins, "Jenkins"],
   ]
 

@@ -73,13 +73,20 @@ blockquote {
 }
 
 code {
-  border: 1px #ccc solid;
   border-radius: 5px;
   background: #ddd;
   display: inline-block;
-  font-size: 0.9em;
-  padding: 0px 8px;
+  font-size: 0.8em;
+  padding: 3px 8px;
   word-break: break-word;
+  vertical-align: middle;
+}
+
+pre {
+  code {
+    @extend .hljs;
+    padding: 10px;
+  }
 }
 
 strong.highlight {
