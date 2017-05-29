@@ -1,20 +1,19 @@
 <article class="post-container center-column">
   <section class="clearfix double-column-container">
     <header class="post-title-container column">
-      <h3>
-        <% if controller.action_name == "show" %>
-          <%= post.title %>
-        <% else %>
-          <%= link_to post.title, post_path(post.slug) %>
-        <% end %>
-      </h3>
+      <h3><%= post.title %></h3>
       <p class="tags-container">
         <span class="post-timestamp">
           <%= (post.published_at || post.updated_at).strftime("%B %-d, %Y") %>
         </span><br>
 
         <% post.tags.each do |tag| %>
-          <%= link_to tag.name, "/?tags=#{tag.name}" %>
+          <%= link_to tag.name, "/posts?tags=#{tag.name}" %>
+        <% end %>
+      </p>
+      <p class="deep-link">
+        <% if controller.action_name != "show" %>
+          <%= link_to "Link", post_path(post.slug) %>
         <% end %>
       </p>
       <% if current_user %>

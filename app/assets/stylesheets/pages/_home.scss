@@ -31,8 +31,14 @@
 .skill-container {
   font-size: 12px;
   height: 84px;
-  margin: 15px;
-  width: 50px;
+  margin: 10px;
+  text-align: center;
+  width: 25%;
+
+  img {
+    height: 80px;
+    width: 100%;
+  }
 
   @include breakpoint($screen-md) {
     font-size: 16px;
