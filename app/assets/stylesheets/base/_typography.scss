@@ -2,6 +2,7 @@
 
 $font-family-headers: 'Oswald', sans-serif;
 $font-family-body: 'Muli', sans-serif;
+$text-body-spacing: 1.5em;
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,14 +32,14 @@ h4 {
 }
 
 p {
-  margin-bottom: 1.5em;
+  margin-bottom: $text-body-spacing;
 }
 
 body {
-  font-family: $font-family-body;
-  font-weight: 300;
   color: $text-color-base;
+  font-family: $font-family-body;
   font-size: 20px;
+  font-weight: 300;
 
   @include breakpoint($screen-md) {
     font-size: 22px;
@@ -46,9 +47,9 @@ body {
 }
 
 a {
-  text-decoration: none;
-  font-family: $font-family-body;
   color: $link-color-base;
+  font-family: $font-family-body;
+  text-decoration: none;
 }
 
 a:hover, a.title-link:hover {
@@ -56,37 +57,45 @@ a:hover, a.title-link:hover {
 }
 
 a.title-link {
-  font-family: $font-family-headers;
   color: inherit;
+  font-family: $font-family-headers;
   &:hover {
     text-decoration: none;
   }
 }
 
 blockquote {
+  background-color: transparent;
+  border-left: #ccc 4px solid;
   font-style: italic;
-  padding: 1em;
-  background-color: #efefef;
+  margin-bottom: $text-body-spacing;
+  padding: 0 1em;
   > p {
     margin: 0;
   }
 }
 
 code {
-  border-radius: 5px;
   background: #ddd;
+  border-radius: 5px;
   display: inline-block;
   font-size: 0.8em;
   padding: 3px 8px;
-  word-break: break-word;
   vertical-align: middle;
+  word-break: break-word;
 }
 
 pre {
+  margin-bottom: $text-body-spacing;
+
   code {
     @extend .hljs;
     padding: 10px;
   }
+}
+
+ul {
+  margin-bottom: $text-body-spacing;
 }
 
 strong.highlight {
