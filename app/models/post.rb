@@ -1,15 +1,19 @@
 require "redcarpet/render_strip"
 
-class Post < ActiveRecord::Base
-  belongs_to :author, :class_name => "User", :foreign_key => "user_id", :required => true
+class Post < ApplicationRecord
+  belongs_to :author, class_name: "User", foreign_key: "user_id", required: true
 
-  has_many :tags, :as => :taggable, :dependent => :destroy
+  has_many :tags, as: :taggable, dependent: :destroy
 
-  validates_presence_of :title, :body
+  validates :title, :body, presence: true
   before_save :generate_slug, :set_published_at
 
+  scope :published, -> {
+    where("published_at < ? and draft is not true", Time.zone.now)
+  }
+
   def plain_body
-    without_images = body.to_s.gsub(/\!?\[.+\]\(.+\)/, '').gsub(/\s{2,}/, '')
+    without_images = body.to_s.gsub(/\!?\[.+\]\(.+\)/, "").gsub(/\s{2,}/, "")
     without_html = html_sanitizer.sanitize(without_images)
     markdown_render.render(without_html).strip
   end
@@ -20,15 +24,16 @@ class Post < ActiveRecord::Base
   end
 
   def generate_slug
-    if self.slug.nil? || self.title_changed?
-      time_stamp = self.published_at || self.created_at || Time.now
-      self.slug = "#{time_stamp.strftime("%m-%d-%Y")}-#{CGI.escape(self.title.downcase.gsub(' ', '-'))}"
+    if slug.nil? || title_changed?
+      time_stamp = published_at || created_at || Time.zone.now
+      self.slug = "#{time_stamp.strftime("%m-%d-%Y")}-" \
+        "#{CGI.escape(title.downcase.tr(" ", "-"))}"
     end
   end
 
   def set_published_at
-    if !self.draft && published_at.nil?
-      self.published_at = self.created_at || Time.now
+    if !draft && published_at.nil?
+      self.published_at = created_at || Time.zone.now
     end
   end
 
@@ -41,6 +46,4 @@ class Post < ActiveRecord::Base
   def markdown_render
     @markdown_render ||= Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
   end
-
-
 end

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, :except => [:index, :show]
-  before_action :find_post, :except => [:index, :new, :create]
+  before_action :authenticate_user!, except: %i{index show}
+  before_action :find_post, except: %i{index new create}
 
   def index
     @posts = list_of_posts
@@ -14,7 +14,8 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post_publish_time = @post.published_at && @post.published_at.strftime("%b %d, %Y")
+    @post_publish_time = @post.published_at &&
+      @post.published_at.strftime("%b %d, %Y")
     render :new
   end
 
@@ -38,7 +39,10 @@ class PostsController < ApplicationController
   private
 
   def find_post
-    @post = Post.includes(:tags).find_by(slug: CGI.escape(params[:slug])) if params[:slug]
+    if params[:slug]
+      @post = Post.includes(:tags).find_by(slug: CGI.escape(params[:slug]))
+    end
+
     @post ||= Post.includes(:tags).find_by(id: params[:id])
     redirect_to root_path if @post.nil?
   end
@@ -60,14 +64,12 @@ class PostsController < ApplicationController
   end
 
   def list_of_posts
-    posts = Post.order("posts.published_at desc").where("published_at < ? and draft is not true", Time.now)
-    posts = posts.paginate(page: params[:page] || 1, per_page: 5)
-    posts = filter_by_tags(posts) if params[:tags]
-    posts
+    Post.published.order("posts.published_at desc")
+      .paginate(page: params[:page] || 1, per_page: 5)
+      .tap do |posts|
+        if params[:tags]
+          posts.where(tags: { name: params[:tags], taggable_type: "Post" })
+        end
+      end
   end
-
-  def filter_by_tags(posts)
-    posts.where(id: Tag.where(name: params[:tags], taggable_type: "Post").pluck(:taggable_id))
-  end
-
 end
