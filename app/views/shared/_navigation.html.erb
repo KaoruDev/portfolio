@@ -6,5 +6,8 @@
   <nav>
     <%= link_to "home", root_path %> |
     <%= link_to "blog", posts_path %>
+    <% if current_user %>
+      | <%= link_to "dashboard", dashboard_path %>
+    <% end %>
   </nav>
 </div>

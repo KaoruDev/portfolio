@@ -22,18 +22,18 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.includes(:tags).create(post_params)
     update_tags
-    redirect_to root_path
+    redirect_to dashboard_path
   end
 
   def update
     @post.update(post_params)
     update_tags
-    redirect_to root_path
+    redirect_to dashboard_path
   end
 
   def destroy
     @post.try(:destroy)
-    redirect_to root_path
+    redirect_to dashboard_path
   end
 
   private
