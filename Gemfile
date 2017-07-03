@@ -20,7 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 # App =================================
 
 gem 'carrierwave'
-gem 'devise'
+gem 'devise', '~> 4.3'
 gem 'figaro'
 gem 'fog'
 gem 'redcarpet'
@@ -41,6 +41,8 @@ end
 
 group :test do
   gem 'fabrication'
+  # TODO: shouldn't need this once we move to integration tests
+  gem 'rails-controller-testing'
 end
 
 group :development do

@@ -1,6 +1,7 @@
 AllCops:
   Exclude:
     - 'db/**/*'
+    - 'config/**/*'
     - 'lib/tasks/**/*'
     - Gemfile
     - config/routes.rb
