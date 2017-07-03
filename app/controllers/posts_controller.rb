@@ -65,12 +65,11 @@ class PostsController < ApplicationController
 
   def list_of_posts
     posts = Post.includes(:tags).published.order("posts.published_at desc")
-      .paginate(page: params[:page] || 1, per_page: 5)
 
     if params[:tags]
       return posts.where(tags: { name: params[:tags], taggable_type: "Post" })
     end
 
-    posts
+    posts.paginate(page: params[:page] || 1, per_page: 5)
   end
 end
