@@ -1,0 +1,183 @@
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'lib/tasks/**/*'
+    - Gemfile
+    - config/routes.rb
+  TargetRubyVersion: 2.4
+
+Rails:
+  Enabled: true
+
+########################## Lint   ################################
+
+Lint/AssignmentInCondition:
+  Enabled: false
+
+Lint/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+Lint/HandleExceptions:
+  Enabled: false
+
+Lint/UnneededSplatExpansion:
+  Enabled: false
+
+########################## Metrics ################################
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
+    - "app/admin/**/*"
+
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - "app/admin/**/*"
+
+Metrics/PerceivedComplexity:
+  Exclude:
+    - "app/admin/**/*"
+
+########################## Layout ################################
+
+Layout/AlignParameters:
+  Enabled: false
+
+Layout/AlignHash:
+  Enabled: false
+
+Layout/ClosingParenthesisIndentation:
+  Enabled: false
+
+Layout/CommentIndentation:
+  Enabled: false
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundMethodBody:
+  Enabled: false
+
+Layout/IndentArray:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+########################## Styles ################################
+
+CaseIndentation:
+  EnforcedStyle: end
+
+Style/BlockDelimiters:
+  Enabled: false
+
+Style/CommentAnnotation:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Style/MultilineMemoization:
+  Enabled: false
+
+Style/MutableConstant:
+  Enabled: false
+
+Style/NegatedIf:
+  Enabled: false
+
+Style/Next:
+  Enabled: false
+
+Style/Not:
+  Enabled: true
+
+Style/NumericPredicate:
+  EnforcedStyle: comparison
+
+Style/PredicateName:
+  NamePrefixBlacklist:
+    - is_
+    - have_
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%':  '{}'
+    '%i': '{}'
+    '%q': '{}'
+    '%Q': '{}'
+    '%r': '""'
+    '%s': '{}'
+    '%w': '{}'
+    '%W': '{}'
+    '%x': '{}'
+
+Style/SingleLineBlockParams:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+Style/TrailingCommaInArguments:
+  Enabled: false
+  # Gabe: maybe enforce trailing comma some day?
+  #EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInLiteral:
+  Enabled: false
+  # Gabe: maybe enforce trailing comma some day?
+  #EnforcedStyleForMultiline: comma
+
+Style/UnneededPercentQ:
+  Enabled: false
+
+########################## Rails ################################
+
+Rails/FilePath:
+  Enabled: false
+
+Rails/HttpPositionalArguments:
+  Exclude:
+    - 'spec/controllers/**/*'
+    - 'spec/requests/**/*'

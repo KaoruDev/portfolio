@@ -54,10 +54,10 @@ GEM
       mime-types (>= 1.16)
     coderay (1.1.1)
     concurrent-ruby (1.0.5)
-    devise (4.2.1)
+    devise (4.3.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 4.1.0, < 5.1)
+      railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
     diff-lcs (1.3)
@@ -233,7 +233,7 @@ GEM
       guard-compat (~> 1.0)
       multi_json (~> 1.8)
     http_parser.rb (0.6.0)
-    i18n (0.8.1)
+    i18n (0.8.4)
     inflecto (0.0.2)
     ipaddress (0.8.3)
     jquery-rails (4.3.1)
@@ -256,7 +256,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_magick (4.7.0)
     mini_portile2 (2.1.0)
-    minitest (5.10.1)
+    minitest (5.10.2)
     multi_json (1.12.1)
     nenv (0.3.0)
     nio4r (2.0.0)
@@ -274,7 +274,7 @@ GEM
     pry-rails (0.3.6)
       pry (>= 0.10.4)
     puma (3.8.2)
-    rack (2.0.1)
+    rack (2.0.3)
     rack-livereload (0.3.16)
       rack
     rack-test (0.6.3)
@@ -291,9 +291,13 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 5.0.2)
       sprockets-rails (>= 2.0.0)
-    rails-dom-testing (2.0.2)
-      activesupport (>= 4.2.0, < 6.0)
-      nokogiri (~> 1.6)
+    rails-controller-testing (1.0.2)
+      actionpack (~> 5.x, >= 5.0.1)
+      actionview (~> 5.x, >= 5.0.1)
+      activesupport (~> 5.x)
+    rails-dom-testing (2.0.3)
+      activesupport (>= 4.2.0)
+      nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
     rails_12factor (0.0.3)
@@ -317,8 +321,9 @@ GEM
       nokogiri (~> 1.5)
       trollop (~> 2.1)
     redcarpet (3.4.0)
-    responders (2.3.0)
-      railties (>= 4.2.0, < 5.1)
+    responders (2.4.0)
+      actionpack (>= 4.2.0, < 5.3)
+      railties (>= 4.2.0, < 5.3)
     rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
@@ -377,7 +382,7 @@ DEPENDENCIES
   awesome_print
   bootstrap-sass (~> 3.3.3)
   carrierwave
-  devise
+  devise (~> 4.3)
   fabrication
   faker
   figaro
@@ -392,6 +397,7 @@ DEPENDENCIES
   puma
   rack-livereload
   rails (= 5.0.2)
+  rails-controller-testing
   rails_12factor
   redcarpet
   rspec-rails (~> 3.0)
