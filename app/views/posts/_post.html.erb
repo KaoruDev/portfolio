@@ -26,4 +26,7 @@
 
     <p class="post-body clearfix column"><%= post.body %></p>
   </section>
+  <% if action_name == "show" %>
+    <div id="disqus_thread"></div>
+  <% end %>
 </article>
