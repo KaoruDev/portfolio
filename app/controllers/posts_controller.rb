@@ -67,7 +67,7 @@ class PostsController < ApplicationController
     posts = Post.includes(:tags).published.order("posts.published_at desc")
 
     if params[:tags]
-      return posts.where(tags: { name: params[:tags], taggable_type: "Post" })
+      posts = posts.where(tags: { name: params[:tags], taggable_type: "Post" })
     end
 
     posts.paginate(page: params[:page] || 1, per_page: 5)
