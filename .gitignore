@@ -18,5 +18,8 @@
 # Ignore application configuration
 /config/application.yml
 
+# This apparently gets auto gen in Heroku https://devcenter.heroku.com/articles/ruby-support#build-behavior
+/config/database.yml
+
 # Ignore master key for decrypting credentials and more.
 /config/master.key
