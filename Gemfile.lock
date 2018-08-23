@@ -241,7 +241,6 @@ DEPENDENCIES
   font-awesome-sass (~> 4.5.0)
   guard-livereload
   jquery-rails (~> 4)
-  nokogiri (~> 1.6.8rc2)
   pg
   pry-rails
   puma
