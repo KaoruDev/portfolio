@@ -1,5 +1,9 @@
-class CreateImages < ActiveRecord::Migration[4.2]
-  def change
+class DropImages < ActiveRecord::Migration[5.2]
+  def up
+    drop_table :images
+  end
+
+  def down
     create_table :images do |t|
       t.string :name
       t.string :file

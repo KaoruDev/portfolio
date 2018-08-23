@@ -12,11 +12,14 @@
 !/log/.keep
 /tmp
 
-# Ignore database files
-config/database.yml
-
 # Rbenv Ruby Version
 .ruby-version
 
 # Ignore application configuration
 /config/application.yml
+
+# This apparently gets auto gen in Heroku https://devcenter.heroku.com/articles/ruby-support#build-behavior
+/config/database.yml
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key

@@ -2,9 +2,8 @@
   <%= render "shared/navigation" %>
 </section>
 
-<a name="summary"></a>
 <section class="summary-container home-container text-center inverse-section">
-  <h2>Summary</h2>
+  <h2>4 One One</h2>
   <div class="contant-links">
     <%= render "shared/contact_info" %>
   </div>
@@ -24,29 +23,6 @@
   <p class="center--column">
     Believes learning is a lifelong event.
   </p>
-
-  <h4>Mantras:</h4>
-  <ul class="text-left core-values-list">
-    <li>Principles over Feelings</li>
-    <li>Triple Double</li>
-    <li>Listening before Speaking</li>
-    <li>Long road is less traveled</li>
-  </ul>
-</section>
-
-<section class="home-container">
-  <div class="center-column">
-    <h2 class="text-center">Tools <i class="fa fa-hand-spock-o"></i></h2>
-    <h4>On the daily...</h4>
-    <div class="skills-list clearfix">
-      <%= list_skills(:daily) %>
-    </div>
-
-    <h4>Would love to get more familiar with...</h4>
-    <div class="skills-list clearfix">
-      <%= list_skills(:familiar) %>
-    </div>
-  </div>
 </section>
 
 <section class="home-container">
@@ -63,24 +39,29 @@
     </div>
     <div class="work-col">
       <p>
-        Sift Science helps stop online fraud using Machine
-        Learning.
+      Sift Science prevents online fraud using Machine Learning. I was a key
+      team member of then the applications team before moving to the
+      infrastructure team. Some of my accomplishments are:
       </p>
-      <p>
-        I currently work on improving our distributed rules engine allowing
-        analyst to focus on tricky fraud activity and improving our models.
-      </p>
-      <p>
-        I have lead a redesign of our rules engine, including benchmarking,
-        have published public APIs, lead the migration of load balancers and
-        continue to work on our React application.
-      </p>
-      <hr>
-      <p>
-        <strong>Java</strong>,
-        <strong>Distributed Systems</strong>,
-        <strong>Javascript</strong>
-      </p>
+      <ul>
+        <li>
+          Redesigned a state system significantly improving stability and
+          reducing code complexity.
+        </li>
+        <li>
+          Built a single page application to allow on-call engineers to quickly
+          failover to a replica database using React, Redux, ZooKeeper,
+          Kubernetes and Docker.
+        </li>
+        <li>
+          Restructured data model saving $25,000 worth of storage costs per
+          month.
+        </li>
+        <li>
+          Worked on varies data pipelines fixing race conditions and elusive
+          bugs.
+        </li>
+      </ul>
     </div>
   </div>
 
@@ -91,32 +72,37 @@
       <p>
         <a href="https://binti.com" target="_blank">Binti.com</a><br>
         February 2016<br>
-        Current
+        April 2018
       </p>
     </div>
     <div class="work-col">
       <p>
         Binti helps foster care by simplifying paper work
         allowing foster care workers to concentrate on the children and not
-        the logistics.
+        the logistics. I was the second engineer of now a fifteen person
+        company. I've helped:
       </p>
-      <p>
-        I built the first reporting tool using Chart.js and work on small
-        features and bugs to ease the load of the engineering team. I
-        take on bugs, refactor legacy code and contribute to tests.
-      </p>
-      <hr>
-      <p>
-        <strong>Ruby on Rails</strong>,
-        <strong>Javascript</strong>
-      </p>
+      <ul>
+        <li>
+          Build three different prototypes from idea to production winning
+          multiple government contracts enabling Binti to grow from a two-person
+          team to a fifteen person company.
+        </li>
+        <li>
+          Setup the first reporting dashboard allowing managers to view the
+          performance of individuals and to distribute work more efficiently.
+        </li>
+        <li>
+          Provided expertise on JavaScript and SASS best practices.
+        </li>
+      </ul>
     </div>
   </div>
 
   <div class="work-exp-container clearfix">
     <div class="work-col employer-info">
       <h3>Inside</h3>
-      <h4>Senior Web Developer</h4>
+      <h4>Software Engineer</h4>
       <p>
         <a href="https://inside.com" target="_blank">Inside.com</a><br>
         April 2015<br>
@@ -125,30 +111,19 @@
     </div>
     <div class="work-col">
       <p>
-        Worked with a remotely based team, led by Jason Calacanis,
-        to bring important and relevant news to users.
+        Worked with a remotely based team, to bring important and
+        relevant news to users. I've contributed by:
       </p>
-      <p>
-        I developed a gulp system able to
-        quickly deploy new vertical sites in a short amount of time
-        with little configurations leading to the company's first high
-        profile contract.
-      </p>
-      <p>
-        I launched a Chrome extension to bring users news in every new tab and
-        breaking news through desktop notifications.
-      </p>
-      <p>
-        We quickly pivoted to an email only service. I built a CMS to
-        prepare each newsletter and manage exporting to MailChimp.
-      </p>
-      <hr>
-      <p>
-        <strong>Ruby on Rails</strong>,
-        <strong>Javascript</strong>,
-        <strong>Chrome Extension</strong>,
-        <strong>Email Campaigns</strong>
-      </p>
+      <ul>
+        <li>
+          Constructing a gulp.js framework allowing us to launch new vertical
+          websites to quickly pitch to different companies. Inside won its
+          first B2B subscription with a vertical site.
+        </li>
+        <li>
+          Prototyped and launched a Chrome extension doubling the user base.
+        </li>
+      </ul>
     </div>
   </div>
 
@@ -165,23 +140,73 @@
     <div class="work-col">
       <p>
         Spredfast helps companies improve their social media presence and
-        market at the speed of social.
+        market at the speed of social. Some achievements include:
       </p>
-      <p>
-        I helped develop Social Echo Graph, an analytics and reporting tool,
-        helping clients discover significant moments in their campaigns. The
-        product had 10x ROI for our clients.
-      </p>
-      <p>
-        I improved implementation of Solr into internal admin application
-        improving productivity of solutions team and ultimately improving
-        customer satisfaction.
-      </p>
-      <hr>
-      <p>
-        <strong>Ruby on Rails</strong>,
-        <strong>Javascript</strong>
-      </p>
+      <ul>
+        <li>
+          Building a data pipeline to power in-depth analytic reports
+          powered by RedShift providing customers with a 10x ROI.
+        </li>
+        <li>
+          Implemented a strategy to update tables with a CSV file containing
+          thousands of rows into MySQL.
+        </li>
+        <li>
+          Worked closely with designers to relaunch the core CMS offering of the
+          company.
+        </li>
+        <li>
+          Contributed to admin tooling improving the productivity of internal
+          teams.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="kudos-container home-container text-center inverse-section">
+  <h2>Kudos</h2>
+  <p>
+    "You're one of the best engineers Sift has and I'm not just saying that."
+    <br>
+    <a href="https://www.linkedin.com/in/leelynne/">Lee Faris</a>
+    - Staff Engineer @ Sift Science
+  </p>
+
+  <p>
+  "I just want to say I really appreciate how aggressively you want to learn new
+  stuff and get better. It makes me want to be better too."
+  <br>
+  <a href="https://www.linkedin.com/in/timbrownatlinkedin">Tim Brown</a>
+  - Software Engineer @ Sift Science
+  </p>
+
+  <p>
+    "Kaoru is one of the big reasons why I love work so much...I feel like he
+    does way more than what's asked of him, and he has a drive towards having
+    good engineering practices being applied at work."
+    <br>
+    <a href="https://www.linkedin.com/in/justinhonlee/">Justin Lee</a>
+    - Software Engineer @ Sift Science
+  </p>
+
+  <p>
+  "Hmm. Yeah this is a complicated one to debug. I would see if you can
+  [reproduce] with your own user. If you can then ping Kaoru. He likely has his
+  hands full, but he knows his s**t"
+  <br>
+  <a href="https://www.linkedin.com/in/howardr/">Howard Rauscher</a>
+  - VP of Engineering @ Spredfast
+  </p>
+</section>
+
+
+<section class="home-container">
+  <div class="center-column">
+    <h2 class="text-center">Technology <i class="fa fa-hand-spock-o"></i></h2>
+    <h4>Familiar With</h4>
+    <div class="skills-list clearfix">
+      <%= list_skills(:daily) %>
     </div>
   </div>
 </section>
