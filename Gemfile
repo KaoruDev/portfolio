@@ -22,7 +22,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise', '~> 4.3'
 gem 'redcarpet', '~> 3.4'
 gem 'will_paginate', '~> 3.0.6'
-gem 'nokogiri', '~> 1.6.8rc2' # https://github.com/rubygems/rubygems/issues/1389
 
 #=======================================
 # Use Capistrano for deployment
