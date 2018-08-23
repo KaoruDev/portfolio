@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.4.0'
+ruby '2.5.1'
 
-gem 'rails', '5.0.2'
+gem 'rails', '5.2.1'
 
 # Ops =================================
 
@@ -10,21 +10,17 @@ gem 'pg'
 
 # Assets ==============================
 
-gem 'autoprefixer-rails'
+gem 'autoprefixer-rails', '~> 9'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'font-awesome-sass', '~> 4.5.0'
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 
 # App =================================
 
-gem 'carrierwave'
 gem 'devise', '~> 4.3'
-gem 'figaro'
-gem 'fog'
-gem 'redcarpet'
-gem "mini_magick"
+gem 'redcarpet', '~> 3.4'
 gem 'will_paginate', '~> 3.0.6'
 gem 'nokogiri', '~> 1.6.8rc2' # https://github.com/rubygems/rubygems/issues/1389
 
@@ -41,6 +37,7 @@ end
 
 group :test do
   gem 'fabrication'
+
   # TODO: shouldn't need this once we move to integration tests
   gem 'rails-controller-testing'
 end

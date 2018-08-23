@@ -9,8 +9,6 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :images
-
   get 'dashboard' => 'blog#dashboard', :as => :dashboard
 
   get 'sitemap.xml', to: 'sitemaps#index', defaults: { format: :xml }
