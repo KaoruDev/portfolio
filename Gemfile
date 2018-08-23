@@ -31,7 +31,7 @@ gem 'nokogiri', '~> 1.6.8rc2' # https://github.com/rubygems/rubygems/issues/1389
 group :development, :test do
   gem 'awesome_print'
   gem 'pry-rails'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', '~> 3'
   gem 'faker'
 end
 
